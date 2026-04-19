@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sai Dheeraj — Supply Chain & Planning Architect</title>
-<meta name="description" content="End-to-end supply chain planner. Kinaxis expert. SAP PP certified. $30M+ portfolio at Becton Dickinson.">
+<meta name="description" content="End-to-end supply chain planner. Kinaxis expert. SAP PP certified. $80M+ portfolio at Becton Dickinson.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    DESIGN TOKENS · Port of Origin
@@ -37,10 +37,10 @@
   --container-red:#C54545;
   --container-green:#5B8F5B;
 
-  --font-display:'Instrument Serif', Georgia, serif;
-  --font-sans:'Inter', -apple-system, system-ui, sans-serif;
-  --font-mono:'JetBrains Mono', Menlo, monospace;
-  --font-stencil:'Bebas Neue', Impact, sans-serif;
+  --font-display:'Geist', -apple-system, system-ui, sans-serif;
+  --font-sans:'Geist', -apple-system, system-ui, sans-serif;
+  --font-mono:'Geist Mono', ui-monospace, monospace;
+  --font-stencil:'Geist', -apple-system, system-ui, sans-serif;
 
   --pad:clamp(20px, 3vw, 48px);
   --maxw:1360px;
@@ -93,9 +93,9 @@ img,svg{display:block;max-width:100%}
 /* ============================================================
    TYPOGRAPHY UTILITIES
    ============================================================ */
-.mono{font-family:var(--font-mono);letter-spacing:0.02em}
-.stencil{font-family:var(--font-stencil);letter-spacing:0.05em;text-transform:uppercase}
-h1,h2,h3,h4,h5{font-weight:500;letter-spacing:-0.01em}
+.mono{font-family:var(--font-mono);letter-spacing:0;font-feature-settings:"tnum"}
+.stencil{font-family:var(--font-stencil);font-weight:700;letter-spacing:0.02em;text-transform:uppercase}
+h1,h2,h3,h4,h5{font-weight:600;letter-spacing:-0.02em}
 p{color:var(--fg-1);max-width:68ch}
 
 /* Animations */
@@ -146,7 +146,7 @@ p{color:var(--fg-1);max-width:68ch}
   width:36px;height:36px;border-radius:6px;
   background:var(--safety);color:#0A0A0A;
   display:grid;place-items:center;
-  font-family:var(--font-stencil);font-size:20px;font-weight:400;
+  font-family:var(--font-sans);font-size:15px;font-weight:800;letter-spacing:-0.02em;
   position:relative;
 }
 .nav-mark::after{
@@ -154,20 +154,20 @@ p{color:var(--fg-1);max-width:68ch}
   border:1px dashed rgba(255,122,26,0.4);border-radius:9px;
 }
 .nav-brand-text{display:flex;flex-direction:column;line-height:1.1}
-.nav-brand-text b{font-size:14px;font-weight:600;color:var(--fg-0);letter-spacing:-0.01em}
-.nav-brand-text span{font-family:var(--font-mono);font-size:10px;color:var(--fg-2);letter-spacing:0.1em}
+.nav-brand-text b{font-size:14px;font-weight:700;color:var(--fg-0);letter-spacing:-0.01em}
+.nav-brand-text span{font-family:var(--font-mono);font-size:10.5px;color:var(--fg-2);letter-spacing:0;font-weight:500}
 
 .nav-links{display:flex;gap:2px;justify-content:center}
 .nav-links a{
   padding:9px 14px;border-radius:6px;color:var(--fg-1);
-  font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;
+  font-family:var(--font-sans);font-size:13px;letter-spacing:-0.005em;font-weight:500;
   transition:all .2s ease;
 }
 .nav-links a:hover{color:var(--fg-0);background:var(--line)}
 
 .nav-status{
   display:flex;align-items:center;gap:8px;padding:9px 14px;
-  font-family:var(--font-mono);font-size:11px;color:var(--green);letter-spacing:0.08em;font-weight:500;
+  font-family:var(--font-sans);font-size:12px;color:var(--green);letter-spacing:0.02em;font-weight:600;text-transform:uppercase;
   background:rgba(110,231,168,0.1);border:1px solid rgba(110,231,168,0.25);border-radius:6px;
 }
 .pulse-dot{
@@ -239,16 +239,16 @@ section{position:relative;z-index:2}
 }
 .hero-manifest{
   display:flex;gap:16px;flex-wrap:wrap;align-items:center;
-  font-family:var(--font-mono);font-size:11px;color:var(--fg-2);letter-spacing:0.12em;text-transform:uppercase;
+  font-family:var(--font-mono);font-size:11px;color:var(--fg-2);letter-spacing:0;text-transform:uppercase;font-weight:500;
 }
-.hero-manifest b{color:var(--fg-0);font-weight:500}
+.hero-manifest b{color:var(--fg-0);font-weight:700}
 .hero-manifest .sep{opacity:.3}
 
 .hero-live{
   display:flex;align-items:center;gap:10px;
-  font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.12em;color:var(--green);
+  font-family:var(--font-mono);font-size:11px;letter-spacing:0;color:var(--green);font-weight:600;text-transform:uppercase;
 }
-.hero-live .time{font-family:var(--font-mono);color:var(--fg-0);font-weight:600}
+.hero-live .time{font-family:var(--font-mono);color:var(--fg-0);font-weight:700}
 
 .hero-main{
   display:grid;grid-template-columns:1fr 360px;gap:56px;align-items:end;
@@ -260,10 +260,10 @@ section{position:relative;z-index:2}
 
 .hero-badge{
   display:inline-flex;align-items:center;gap:10px;width:fit-content;
-  padding:8px 16px;
+  padding:8px 14px;
   background:rgba(255,122,26,0.1);border:1px solid rgba(255,122,26,0.3);
-  border-radius:4px;
-  font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;
+  border-radius:100px;
+  font-family:var(--font-mono);font-size:11.5px;font-weight:600;letter-spacing:0.02em;text-transform:uppercase;
   color:var(--safety);
 }
 .hero-badge::before{content:'▮';font-size:10px}
@@ -271,13 +271,14 @@ section{position:relative;z-index:2}
 .hero h1{
   font-family:var(--font-display);
   font-size:clamp(64px, 11vw, 168px);
-  font-weight:400;
-  line-height:0.92;
-  letter-spacing:-0.03em;
+  font-weight:600;
+  line-height:0.95;
+  letter-spacing:-0.035em;
   color:var(--fg-0);
 }
 .hero h1 em{
-  font-style:italic;
+  font-style:normal;
+  font-weight:500;
   color:var(--hivis);
 }
 .hero h1 .sup{
@@ -287,8 +288,8 @@ section{position:relative;z-index:2}
 }
 
 .hero-role{
-  font-family:var(--font-stencil);font-weight:400;
-  font-size:clamp(20px, 2.5vw, 30px);letter-spacing:0.18em;text-transform:uppercase;
+  font-family:var(--font-sans);font-weight:700;
+  font-size:clamp(18px, 2.2vw, 26px);letter-spacing:0.02em;text-transform:uppercase;
   color:var(--safety);
   display:inline-flex;align-items:center;gap:14px;width:fit-content;
 }
@@ -306,8 +307,8 @@ section{position:relative;z-index:2}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
 .btn{
   display:inline-flex;align-items:center;gap:10px;
-  padding:14px 22px;border-radius:6px;
-  font-family:var(--font-stencil);font-size:15px;letter-spacing:0.16em;text-transform:uppercase;
+  padding:14px 22px;border-radius:8px;
+  font-family:var(--font-sans);font-size:14px;font-weight:600;letter-spacing:-0.005em;
   transition:all .25s ease;border:1px solid var(--line-strong);
 }
 .btn-primary{background:var(--safety);color:#0A0A0A;border-color:var(--safety)}
@@ -329,8 +330,8 @@ section{position:relative;z-index:2}
   display:flex;justify-content:space-between;align-items:center;
 }
 .waybill-head .title{
-  font-family:var(--font-stencil);font-size:15px;letter-spacing:0.18em;color:#0A0A0A;
-  background:var(--hivis);padding:5px 12px;border-radius:3px;
+  font-family:var(--font-sans);font-size:13px;font-weight:700;letter-spacing:0.04em;color:#0A0A0A;
+  background:var(--hivis);padding:6px 12px;border-radius:3px;text-transform:uppercase;
 }
 .waybill-head .no{
   font-family:var(--font-mono);font-size:11px;font-weight:600;color:var(--fg-0);
@@ -365,8 +366,8 @@ section{position:relative;z-index:2}
 .ticker-label{
   position:absolute;left:0;top:0;bottom:0;z-index:2;
   background:var(--safety);color:#0A0A0A;
-  padding:0 24px;display:flex;align-items:center;gap:10px;
-  font-family:var(--font-stencil);font-size:15px;letter-spacing:0.22em;
+  padding:0 22px;display:flex;align-items:center;gap:10px;
+  font-family:var(--font-sans);font-size:13px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;
   box-shadow:8px 0 16px rgba(0,0,0,0.4);
 }
 .ticker-label::after{
@@ -380,11 +381,11 @@ section{position:relative;z-index:2}
   padding-left:200px;
 }
 .ticker-item{display:flex;align-items:center;gap:12px;color:var(--fg-1)}
-.ticker-item b{color:var(--safety);font-weight:600}
+.ticker-item b{color:var(--safety);font-weight:700}
 .ticker-item .chip{
-  font-size:10px;padding:4px 8px;background:var(--bg-3);color:var(--hivis);
-  border-radius:3px;letter-spacing:0.14em;text-transform:uppercase;
-  border:1px solid rgba(245,213,71,0.2);font-weight:600;
+  font-family:var(--font-sans);font-size:10px;padding:4px 8px;background:var(--bg-3);color:var(--hivis);
+  border-radius:4px;letter-spacing:0.04em;text-transform:uppercase;
+  border:1px solid rgba(245,213,71,0.2);font-weight:700;
 }
 
 @media (max-width:900px){
@@ -415,10 +416,10 @@ section{position:relative;z-index:2}
 .conveyor-divider::after{bottom:0}
 .conveyor-label{
   position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  font-family:var(--font-stencil);font-size:18px;letter-spacing:0.3em;
-  color:var(--fg-1);
-  display:flex;align-items:center;gap:16px;
-  padding:0 24px;background:var(--bg-0);
+  font-family:var(--font-sans);font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--fg-0);
+  display:flex;align-items:center;gap:14px;
+  padding:0 20px;background:var(--bg-0);
   z-index:2;
 }
 .conveyor-label::before,.conveyor-label::after{
@@ -440,22 +441,22 @@ section{position:relative;z-index:2}
 .section-head-left{display:flex;flex-direction:column;gap:20px}
 .section-num{
   display:flex;align-items:center;gap:12px;
-  font-family:var(--font-mono);font-size:12px;color:var(--fg-2);letter-spacing:0.2em;text-transform:uppercase;font-weight:500;
+  font-family:var(--font-mono);font-size:11.5px;color:var(--fg-2);letter-spacing:0.02em;text-transform:uppercase;font-weight:600;
 }
 .section-num .n{
   background:var(--safety);color:#0A0A0A;
-  padding:5px 11px;border-radius:3px;
-  font-family:var(--font-stencil);font-size:15px;letter-spacing:0.1em;
+  padding:5px 10px;border-radius:4px;
+  font-family:var(--font-sans);font-size:12px;font-weight:700;letter-spacing:0;
 }
 .section-head h2{
-  font-family:var(--font-display);font-weight:400;
-  font-size:clamp(44px, 6.5vw, 96px);letter-spacing:-0.025em;line-height:0.96;color:var(--fg-0);
+  font-family:var(--font-display);font-weight:600;
+  font-size:clamp(44px, 6.5vw, 96px);letter-spacing:-0.035em;line-height:1;color:var(--fg-0);
   max-width:16ch;
 }
-.section-head h2 em{font-style:italic;color:var(--hivis)}
+.section-head h2 em{font-style:normal;font-weight:500;color:var(--hivis)}
 .section-head-note{
-  font-family:var(--font-mono);font-size:12px;color:var(--fg-2);
-  text-align:right;max-width:280px;line-height:1.7;letter-spacing:0.03em;font-weight:500;
+  font-family:var(--font-sans);font-size:13px;color:var(--fg-2);
+  text-align:right;max-width:280px;line-height:1.65;letter-spacing:0;font-weight:400;
 }
 @media (max-width:760px){
   .section-head{grid-template-columns:1fr}
@@ -479,7 +480,7 @@ section{position:relative;z-index:2}
   border-bottom:2px solid var(--hivis);
 }
 .live-board-title{
-  font-family:var(--font-stencil);font-size:17px;letter-spacing:0.22em;color:var(--hivis);
+  font-family:var(--font-sans);font-size:14px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--hivis);
   display:flex;align-items:center;gap:12px;
 }
 .live-board-title::before{content:'';width:10px;height:10px;background:var(--hivis);border-radius:1px}
@@ -504,23 +505,23 @@ section{position:relative;z-index:2}
 .metric:last-child{border-right:none}
 .metric-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 .metric-label{
-  font-family:var(--font-stencil);font-size:14px;color:var(--fg-0);letter-spacing:0.18em;
+  font-family:var(--font-sans);font-size:13px;font-weight:700;color:var(--fg-0);letter-spacing:-0.005em;
   line-height:1.3;
 }
 .metric-id{
-  font-family:var(--font-mono);font-size:10px;color:var(--fg-3);letter-spacing:0.14em;font-weight:500;
+  font-family:var(--font-mono);font-size:10px;color:var(--fg-3);letter-spacing:0;font-weight:500;
   padding:3px 7px;background:rgba(0,0,0,0.4);border-radius:3px;
 }
 .metric-viz{
   flex:1;display:flex;align-items:center;justify-content:center;min-height:110px;
 }
 .metric-value{
-  font-family:var(--font-display);font-size:56px;font-weight:400;
-  line-height:0.92;color:var(--fg-0);letter-spacing:-0.02em;
+  font-family:var(--font-display);font-size:56px;font-weight:600;
+  line-height:0.95;color:var(--fg-0);letter-spacing:-0.035em;
   display:flex;align-items:baseline;gap:2px;
 }
 .metric-value .unit{
-  font-family:var(--font-sans);font-size:22px;font-weight:500;color:var(--safety);
+  font-family:var(--font-sans);font-size:22px;font-weight:600;color:var(--safety);
   font-style:normal;margin-left:6px;letter-spacing:-0.01em;
 }
 .metric-sub{
@@ -610,7 +611,7 @@ section{position:relative;z-index:2}
 .scope-stage-node:hover{border-color:var(--safety);background:rgba(255,122,26,0.06);transform:translateY(-2px)}
 
 .scope-stage-num{
-  font-family:var(--font-stencil);font-size:34px;color:var(--safety);line-height:0.9;letter-spacing:0.02em;
+  font-family:var(--font-display);font-size:34px;color:var(--safety);line-height:0.9;letter-spacing:-0.03em;font-weight:700;
 }
 .scope-stage-node:nth-child(3) .scope-stage-num{color:var(--hivis)}
 .scope-stage-node:nth-child(4) .scope-stage-num{color:var(--safety)}
@@ -618,20 +619,20 @@ section{position:relative;z-index:2}
 .scope-stage-node:nth-child(6) .scope-stage-num{color:var(--green)}
 
 .scope-stage-node h4{
-  font-family:var(--font-display);font-size:22px;font-weight:500;color:var(--fg-0);
-  letter-spacing:-0.01em;line-height:1.1;
+  font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--fg-0);
+  letter-spacing:-0.02em;line-height:1.1;
 }
 .scope-stage-node p{
-  font-family:var(--font-mono);font-size:10.5px;color:var(--fg-2);line-height:1.5;letter-spacing:0.02em;
+  font-family:var(--font-sans);font-size:12.5px;color:var(--fg-2);line-height:1.5;
 }
 .scope-stage-node .tools{
   display:flex;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:8px;
   border-top:1px dashed var(--line);
 }
 .scope-stage-node .tool{
-  font-family:var(--font-mono);font-size:9px;color:var(--fg-1);
+  font-family:var(--font-mono);font-size:10px;color:var(--fg-1);
   padding:2px 6px;border-radius:2px;background:rgba(255,255,255,0.04);
-  letter-spacing:0.08em;text-transform:uppercase;font-weight:500;
+  letter-spacing:0;font-weight:500;text-transform:uppercase;
 }
 
 @media (max-width:900px){
@@ -655,9 +656,9 @@ section{position:relative;z-index:2}
   padding-bottom:14px;margin-bottom:14px;border-bottom:1px dashed var(--line-mid);
 }
 .gantt-head-title{
-  font-family:var(--font-stencil);font-size:15px;letter-spacing:0.2em;color:var(--fg-0);
+  font-family:var(--font-sans);font-size:14px;font-weight:700;letter-spacing:0.02em;color:var(--fg-0);text-transform:uppercase;
 }
-.gantt-head-meta{font-family:var(--font-mono);font-size:11px;color:var(--fg-2);letter-spacing:0.1em;text-transform:uppercase}
+.gantt-head-meta{font-family:var(--font-mono);font-size:11px;color:var(--fg-2);font-weight:500}
 
 .gantt-scale{
   position:relative;height:32px;
@@ -686,9 +687,9 @@ section{position:relative;z-index:2}
 
 .gantt-track{position:relative;height:30px;background:rgba(0,0,0,0.3);border-radius:4px;border:1px solid var(--line)}
 .gantt-bar{
-  position:absolute;top:0;bottom:0;border-radius:3px;
+  position:absolute;top:0;bottom:0;border-radius:4px;
   display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 12px;
-  font-family:var(--font-stencil);font-size:12px;letter-spacing:0.14em;color:#0A0A0A;
+  font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:-0.005em;color:#0A0A0A;
   transition:all .25s ease;cursor:default;
   overflow:hidden;
 }
@@ -721,15 +722,15 @@ section{position:relative;z-index:2}
   width:fit-content;
 }
 .role-company{
-  font-family:var(--font-display);font-size:44px;font-weight:400;
-  letter-spacing:-0.02em;line-height:1;color:var(--fg-0);
+  font-family:var(--font-display);font-size:44px;font-weight:600;
+  letter-spacing:-0.035em;line-height:1;color:var(--fg-0);
 }
 .role-title{font-size:14px;color:var(--fg-1);line-height:1.55;font-weight:500}
-.role-title span{display:block;font-family:var(--font-mono);font-size:11px;color:var(--fg-2);letter-spacing:0.04em;margin-top:4px;font-weight:400}
+.role-title span{display:block;font-family:var(--font-mono);font-size:11px;color:var(--fg-2);letter-spacing:0;margin-top:4px;font-weight:400}
 .role-industry{
   display:inline-flex;align-items:center;gap:8px;padding:7px 12px;
-  background:var(--bg-2);border:1px solid var(--line-mid);border-radius:3px;
-  font-family:var(--font-stencil);font-size:12px;letter-spacing:0.2em;color:var(--fg-0);
+  background:var(--bg-2);border:1px solid var(--line-mid);border-radius:5px;
+  font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:0.02em;color:var(--fg-0);text-transform:uppercase;
   width:fit-content;
 }
 .role-industry::before{content:'▮';color:var(--safety);font-size:11px}
@@ -755,13 +756,13 @@ section{position:relative;z-index:2}
 .achievement:hover::before{transform:scaleY(1)}
 .achievement-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .achievement-number{
-  font-family:var(--font-display);font-size:38px;line-height:1;color:var(--hivis);font-weight:400;font-style:italic;
+  font-family:var(--font-display);font-size:40px;line-height:1;color:var(--hivis);font-weight:700;font-style:normal;letter-spacing:-0.035em;
 }
 .achievement-num-label{
-  font-family:var(--font-mono);font-size:10px;color:var(--fg-3);letter-spacing:0.14em;text-transform:uppercase;font-weight:500;
+  font-family:var(--font-mono);font-size:10px;color:var(--fg-3);letter-spacing:0.02em;text-transform:uppercase;font-weight:600;
 }
 .achievement-label{
-  font-family:var(--font-stencil);font-size:13px;color:var(--safety);letter-spacing:0.16em;font-weight:400;
+  font-family:var(--font-sans);font-size:13px;color:var(--safety);letter-spacing:0.02em;font-weight:700;text-transform:uppercase;
 }
 .achievement-text{font-size:14px;color:var(--fg-1);line-height:1.6;font-weight:400}
 
@@ -799,15 +800,15 @@ section{position:relative;z-index:2}
 }
 .case-story{padding:64px 44px 44px;display:flex;flex-direction:column;gap:20px}
 .case-label{
-  font-family:var(--font-stencil);font-size:13px;color:var(--safety);letter-spacing:0.22em;
+  font-family:var(--font-sans);font-size:12px;font-weight:700;color:var(--safety);letter-spacing:0.04em;text-transform:uppercase;
   padding:6px 12px;background:rgba(255,122,26,0.1);border:1px solid rgba(255,122,26,0.3);border-radius:4px;
   width:fit-content;
 }
 .case-title{
-  font-family:var(--font-display);font-size:clamp(40px, 5.5vw, 76px);font-weight:400;
-  line-height:0.96;letter-spacing:-0.03em;color:var(--fg-0);
+  font-family:var(--font-display);font-size:clamp(40px, 5.5vw, 76px);font-weight:600;
+  line-height:1;letter-spacing:-0.035em;color:var(--fg-0);
 }
-.case-title em{font-style:italic;color:var(--green)}
+.case-title em{font-style:normal;font-weight:500;color:var(--green)}
 .case-copy{font-size:16px;color:var(--fg-1);line-height:1.75;max-width:48ch;font-weight:400}
 .case-copy b{color:var(--fg-0);font-weight:600}
 
@@ -827,7 +828,7 @@ section{position:relative;z-index:2}
 }
 .case-viz-head{
   display:flex;justify-content:space-between;align-items:center;
-  font-family:var(--font-mono);font-size:11px;color:var(--fg-2);letter-spacing:0.16em;text-transform:uppercase;font-weight:500;
+  font-family:var(--font-mono);font-size:11px;color:var(--fg-2);letter-spacing:0;text-transform:uppercase;font-weight:600;
   padding-bottom:16px;border-bottom:1px dashed var(--line-mid);
 }
 .case-viz-head .live{color:var(--green);display:flex;align-items:center;gap:6px}
@@ -863,15 +864,15 @@ section{position:relative;z-index:2}
   padding:14px 20px;
   background:var(--bg-3);border-bottom:2px solid var(--line-mid);
   display:flex;justify-content:space-between;align-items:center;gap:12px;
-  font-family:var(--font-mono);font-size:11px;color:var(--fg-2);letter-spacing:0.14em;text-transform:uppercase;font-weight:500;
+  font-family:var(--font-mono);font-size:11px;color:var(--fg-2);letter-spacing:0;text-transform:uppercase;font-weight:600;
   position:relative;
 }
 .project-header::after{
   content:'';position:absolute;bottom:-2px;left:0;width:60px;height:2px;background:var(--safety);
 }
-.project-header .no{color:var(--fg-0);font-weight:600}
+.project-header .no{color:var(--fg-0);font-weight:700}
 .project-header .tag{
-  padding:4px 8px;border-radius:3px;font-family:var(--font-stencil);font-size:11px;letter-spacing:0.16em;
+  padding:4px 9px;border-radius:4px;font-family:var(--font-sans);font-size:11px;font-weight:700;letter-spacing:0.04em;
 }
 .tag-built{background:rgba(255,122,26,0.15);color:var(--safety);border:1px solid rgba(255,122,26,0.3)}
 .tag-ops{background:rgba(245,213,71,0.12);color:var(--hivis);border:1px solid rgba(245,213,71,0.3)}
@@ -879,11 +880,11 @@ section{position:relative;z-index:2}
 .tag-dash{background:rgba(63,176,166,0.12);color:var(--teal);border:1px solid rgba(63,176,166,0.3)}
 
 .project-body{padding:24px 20px;display:flex;flex-direction:column;gap:14px;flex:1}
-.project-year{font-family:var(--font-mono);font-size:10.5px;color:var(--hivis);letter-spacing:0.16em;font-weight:500}
+.project-year{font-family:var(--font-mono);font-size:10.5px;color:var(--hivis);letter-spacing:0.02em;font-weight:600;text-transform:uppercase}
 .project h3{
-  font-family:var(--font-display);font-size:28px;font-weight:400;line-height:1.1;letter-spacing:-0.02em;color:var(--fg-0);
+  font-family:var(--font-display);font-size:24px;font-weight:600;line-height:1.15;letter-spacing:-0.025em;color:var(--fg-0);
 }
-.project.lg h3{font-size:38px}
+.project.lg h3{font-size:32px}
 .project-desc{font-size:14px;color:var(--fg-1);line-height:1.65;font-weight:400}
 
 .project-stats{
@@ -895,8 +896,8 @@ section{position:relative;z-index:2}
   border-right:1px dashed var(--line-mid);padding-right:12px;
 }
 .project-stat:last-child{border-right:none;padding-left:14px;padding-right:0}
-.project-stat .num{font-family:var(--font-display);font-size:28px;color:var(--hivis);line-height:1;font-style:italic;font-weight:400}
-.project-stat .lbl{font-family:var(--font-mono);font-size:10px;color:var(--fg-2);letter-spacing:0.14em;text-transform:uppercase;font-weight:500}
+.project-stat .num{font-family:var(--font-display);font-size:28px;color:var(--hivis);line-height:1;font-style:normal;font-weight:700;letter-spacing:-0.03em}
+.project-stat .lbl{font-family:var(--font-mono);font-size:10px;color:var(--fg-2);letter-spacing:0;text-transform:uppercase;font-weight:600}
 
 .project-viz{
   margin:0 20px 14px;padding:14px;background:var(--bg-0);border-radius:4px;border:1px solid var(--line);
@@ -906,7 +907,7 @@ section{position:relative;z-index:2}
   padding:12px 20px;border-top:1px solid var(--line-mid);
   background:rgba(0,0,0,0.3);
   display:flex;justify-content:space-between;align-items:center;gap:10px;
-  font-family:var(--font-mono);font-size:10px;color:var(--fg-3);letter-spacing:0.12em;font-weight:500;
+  font-family:var(--font-mono);font-size:10px;color:var(--fg-3);letter-spacing:0;font-weight:600;text-transform:uppercase;
 }
 .project-stack{display:flex;gap:6px;flex-wrap:wrap;padding-top:12px}
 
@@ -928,13 +929,13 @@ section{position:relative;z-index:2}
 .kanban::before{
   content:'KANBAN · COMPETENCIES BOARD';
   position:absolute;top:-1px;left:20px;
-  font-family:var(--font-mono);font-size:10px;color:var(--fg-2);letter-spacing:0.18em;font-weight:500;
+  font-family:var(--font-mono);font-size:10px;color:var(--fg-2);letter-spacing:0.02em;font-weight:600;text-transform:uppercase;
   background:var(--bg-1);padding:2px 10px;transform:translateY(-50%);
 }
 .kanban::after{
   content:'REV 02.2026';
   position:absolute;top:-1px;right:20px;
-  font-family:var(--font-mono);font-size:10px;color:var(--fg-3);letter-spacing:0.16em;font-weight:500;
+  font-family:var(--font-mono);font-size:10px;color:var(--fg-3);letter-spacing:0;font-weight:600;text-transform:uppercase;
   background:var(--bg-1);padding:2px 10px;transform:translateY(-50%);
 }
 
@@ -952,7 +953,7 @@ section{position:relative;z-index:2}
   padding-bottom:10px;border-bottom:1px dashed var(--line-mid);
 }
 .kanban-col-head h4{
-  font-family:var(--font-stencil);font-size:16px;letter-spacing:0.22em;color:var(--fg-0);font-weight:400;
+  font-family:var(--font-sans);font-size:14px;font-weight:700;letter-spacing:0.04em;color:var(--fg-0);text-transform:uppercase;
 }
 .kanban-col-head .count{
   font-family:var(--font-mono);font-size:10px;color:var(--fg-2);font-weight:500;
@@ -978,9 +979,9 @@ section{position:relative;z-index:2}
 .creds{padding-bottom:60px}
 .creds-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;margin-top:40px}
 .creds-col h4{
-  font-family:var(--font-stencil);font-size:15px;color:var(--fg-0);letter-spacing:0.24em;
+  font-family:var(--font-sans);font-size:13px;color:var(--fg-0);letter-spacing:0.06em;
   margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid var(--line-mid);
-  position:relative;font-weight:400;
+  position:relative;font-weight:700;text-transform:uppercase;
 }
 .creds-col h4::after{content:'';position:absolute;bottom:-2px;left:0;width:60px;height:2px;background:var(--safety)}
 
@@ -990,14 +991,14 @@ section{position:relative;z-index:2}
 }
 .edu-item:last-child{border-bottom:none}
 .edu-year{
-  font-family:var(--font-mono);font-size:11px;color:var(--hivis);letter-spacing:0.1em;font-weight:600;
+  font-family:var(--font-mono);font-size:11px;color:var(--hivis);letter-spacing:0.02em;font-weight:600;text-transform:uppercase;
 }
 .edu-body h5{
-  font-family:var(--font-display);font-size:20px;font-weight:400;color:var(--fg-0);margin-bottom:4px;letter-spacing:-0.01em;
+  font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--fg-0);margin-bottom:4px;letter-spacing:-0.02em;
 }
-.edu-body p{font-family:var(--font-mono);font-size:11px;color:var(--fg-2);letter-spacing:0.06em;font-weight:500}
+.edu-body p{font-family:var(--font-sans);font-size:12.5px;color:var(--fg-2);letter-spacing:0;font-weight:400}
 .edu-status{
-  font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+  font-family:var(--font-mono);font-size:10px;letter-spacing:0.04em;text-transform:uppercase;
   padding:4px 10px;border-radius:3px;font-weight:600;
 }
 .edu-status.live{color:var(--green);background:rgba(110,231,168,0.1)}
@@ -1022,9 +1023,9 @@ section{position:relative;z-index:2}
 .cert-name{font-size:14px;color:var(--fg-0);font-weight:500}
 .cert-date{font-family:var(--font-mono);font-size:11px;color:var(--hivis);letter-spacing:0.08em;font-weight:600}
 .cert-stamp{
-  position:absolute;top:50%;right:-10px;transform:translateY(-50%) rotate(-10deg);
-  font-family:var(--font-stencil);font-size:14px;color:var(--safety);letter-spacing:0.2em;
-  border:2.5px solid var(--safety);border-radius:4px;padding:4px 10px;
+  position:absolute;top:50%;right:-10px;transform:translateY(-50%) rotate(-8deg);
+  font-family:var(--font-sans);font-size:11px;font-weight:800;color:var(--safety);letter-spacing:0.08em;text-transform:uppercase;
+  border:2.5px solid var(--safety);border-radius:4px;padding:5px 12px;
   background:rgba(255,122,26,0.08);
 }
 
@@ -1046,16 +1047,16 @@ section{position:relative;z-index:2}
 }
 .contact-inner{padding:72px 48px 48px;position:relative}
 .contact-label{
-  font-family:var(--font-stencil);font-size:15px;color:var(--hivis);letter-spacing:0.24em;
+  font-family:var(--font-sans);font-size:13px;color:var(--hivis);letter-spacing:0.04em;text-transform:uppercase;
   padding:6px 12px;background:rgba(245,213,71,0.1);border:1px solid rgba(245,213,71,0.3);border-radius:4px;
-  width:fit-content;display:inline-block;font-weight:400;
+  width:fit-content;display:inline-block;font-weight:700;
 }
 .contact-title{
-  font-family:var(--font-display);font-size:clamp(48px, 8vw, 120px);font-weight:400;
-  letter-spacing:-0.03em;line-height:0.92;color:var(--fg-0);
+  font-family:var(--font-display);font-size:clamp(48px, 8vw, 120px);font-weight:600;
+  letter-spacing:-0.035em;line-height:1;color:var(--fg-0);
   margin:20px 0 24px;
 }
-.contact-title em{font-style:italic;color:var(--hivis)}
+.contact-title em{font-style:normal;font-weight:500;color:var(--hivis)}
 .contact-copy{font-size:17px;max-width:58ch;color:var(--fg-1);line-height:1.75;font-weight:400}
 .contact-copy b{color:var(--fg-0);font-weight:600}
 
@@ -1076,8 +1077,8 @@ section{position:relative;z-index:2}
 
 .contact-stamp{
   position:absolute;top:100px;right:60px;
-  font-family:var(--font-stencil);font-size:20px;color:var(--green);letter-spacing:0.24em;
-  border:3.5px solid var(--green);border-radius:4px;padding:12px 20px;
+  font-family:var(--font-sans);font-size:16px;font-weight:800;color:var(--green);letter-spacing:0.1em;text-transform:uppercase;
+  border:3.5px solid var(--green);border-radius:6px;padding:12px 20px;
   transform:rotate(8deg);background:rgba(110,231,168,0.06);
   display:none;
 }
@@ -1094,13 +1095,233 @@ section{position:relative;z-index:2}
 .footer{
   margin-top:40px;padding:28px 0;border-top:1px solid var(--line-mid);
   display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
-  font-family:var(--font-mono);font-size:11px;color:var(--fg-3);letter-spacing:0.08em;font-weight:500;
+  font-family:var(--font-mono);font-size:11px;color:var(--fg-3);letter-spacing:0;font-weight:500;
 }
-.footer b{color:var(--fg-1)}
+.footer b{color:var(--fg-1);font-weight:600}
 
 /* ============================================================
-   ANIMATIONS · SCROLL REVEAL
+   SUPPLY CHAIN NETWORK TOPOLOGY
    ============================================================ */
+.network{padding-bottom:60px}
+.network-card{
+  margin-top:40px;
+  border:1px solid var(--line-mid);border-radius:10px;
+  background:linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  position:relative;overflow:hidden;
+  box-shadow:0 24px 60px -20px rgba(0,0,0,0.5);
+}
+.network-head{
+  padding:16px 22px;
+  display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+  background:#0A0A0A;
+  border-bottom:2px solid var(--safety);
+}
+.network-head-title{
+  font-family:var(--font-sans);font-size:14px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;
+  color:var(--safety);display:flex;align-items:center;gap:12px;
+}
+.network-head-title::before{content:'';width:10px;height:10px;background:var(--safety);border-radius:1px;box-shadow:0 0 8px var(--safety)}
+.network-head-meta{
+  display:flex;gap:18px;font-family:var(--font-mono);font-size:11px;color:var(--fg-2);font-weight:500;
+}
+.network-head-meta b{color:var(--fg-0);font-weight:700}
+.network-head-meta .live{color:var(--green);display:flex;align-items:center;gap:6px}
+
+.network-viz{
+  padding:32px 20px;position:relative;min-height:420px;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(63,176,166,0.06) 0%, transparent 70%);
+}
+.network-viz::before{
+  content:'';position:absolute;inset:0;pointer-events:none;opacity:0.4;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size:40px 40px;
+}
+
+.network-legend{
+  padding:16px 22px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  border-top:1px solid var(--line-mid);background:rgba(0,0,0,0.25);
+}
+.network-legend-items{display:flex;gap:20px;flex-wrap:wrap}
+.network-legend-item{
+  display:flex;align-items:center;gap:8px;
+  font-family:var(--font-mono);font-size:11px;color:var(--fg-2);font-weight:500;letter-spacing:0;text-transform:uppercase;
+}
+.network-legend-item .sw{width:12px;height:12px;border-radius:2px}
+.network-legend-stats{
+  display:flex;gap:20px;font-family:var(--font-mono);font-size:11px;color:var(--fg-2);font-weight:500;
+}
+.network-legend-stats b{color:var(--fg-0);font-weight:700}
+
+/* Network animations */
+.flow-line{
+  stroke-dasharray:4 4;
+  animation:dashflow 2s linear infinite;
+}
+.node-pulse{
+  animation:nodePulse 2.4s ease-in-out infinite;
+  transform-origin:center;
+  transform-box:fill-box;
+}
+.node-pulse.d1{animation-delay:.3s}
+.node-pulse.d2{animation-delay:.6s}
+.node-pulse.d3{animation-delay:.9s}
+.node-pulse.d4{animation-delay:1.2s}
+@keyframes nodePulse{
+  0%,100%{opacity:0.9}
+  50%{opacity:1;filter:drop-shadow(0 0 6px currentColor)}
+}
+
+/* Packet animation */
+.packet{
+  fill:var(--hivis);
+  filter:drop-shadow(0 0 6px var(--hivis));
+}
+
+/* ============================================================
+   INVENTORY HEATMAP
+   ============================================================ */
+.heatmap-panel{
+  margin-top:32px;padding:24px;
+  border:1px solid var(--line-mid);border-radius:10px;
+  background:var(--bg-1);
+}
+.heatmap-head{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+  padding-bottom:16px;margin-bottom:20px;
+  border-bottom:1px dashed var(--line-mid);
+}
+.heatmap-title{
+  font-family:var(--font-sans);font-size:14px;font-weight:700;letter-spacing:0.02em;text-transform:uppercase;color:var(--fg-0);
+  display:flex;align-items:center;gap:10px;
+}
+.heatmap-title::before{content:'';width:8px;height:8px;background:var(--teal);border-radius:1px}
+.heatmap-meta{
+  display:flex;gap:18px;font-family:var(--font-mono);font-size:11px;color:var(--fg-2);font-weight:500;
+}
+.heatmap-meta b{color:var(--fg-0);font-weight:700}
+
+.heatmap-grid{
+  display:grid;
+  grid-template-columns:80px 1fr;
+  gap:14px 16px;
+  align-items:center;
+}
+.heatmap-row-label{
+  display:flex;align-items:center;gap:8px;
+  font-family:var(--font-mono);font-size:11px;color:var(--fg-1);font-weight:600;letter-spacing:0;text-transform:uppercase;
+}
+.heatmap-row-label .seg{
+  width:22px;height:22px;border-radius:4px;
+  display:grid;place-items:center;
+  font-family:var(--font-sans);font-size:11px;font-weight:800;color:#0A0A0A;
+}
+.heatmap-row-label .seg.a{background:var(--safety)}
+.heatmap-row-label .seg.b{background:var(--hivis)}
+.heatmap-row-label .seg.c{background:var(--teal);color:#FFFFFF}
+.heatmap-row{
+  display:grid;grid-template-columns:repeat(16,1fr);gap:3px;
+  height:28px;
+}
+.heat-cell{
+  border-radius:2px;border:1px solid rgba(255,255,255,0.06);
+  transition:transform .2s ease;
+  position:relative;
+}
+.heat-cell:hover{transform:scale(1.1);z-index:2;border-color:var(--fg-0)}
+.heat-cell.h0{background:rgba(255,90,90,0.25)}    /* critical low */
+.heat-cell.h1{background:rgba(255,122,26,0.3)}    /* low */
+.heat-cell.h2{background:rgba(245,213,71,0.35)}   /* warning */
+.heat-cell.h3{background:rgba(63,176,166,0.3)}    /* normal */
+.heat-cell.h4{background:rgba(110,231,168,0.45)}  /* healthy */
+.heat-cell.h5{background:rgba(110,231,168,0.75)}  /* high */
+
+.heatmap-footer{
+  margin-top:20px;padding-top:16px;border-top:1px dashed var(--line-mid);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+}
+.heatmap-scale{
+  display:flex;gap:4px;align-items:center;
+  font-family:var(--font-mono);font-size:10px;color:var(--fg-2);font-weight:500;text-transform:uppercase;letter-spacing:0;
+}
+.heatmap-scale .scale-bar{
+  display:flex;gap:2px;
+}
+.heatmap-scale .scale-bar span{
+  width:14px;height:10px;border-radius:1px;
+}
+.heatmap-note{
+  font-family:var(--font-sans);font-size:12px;color:var(--fg-2);font-weight:400;
+}
+.heatmap-note b{color:var(--fg-0);font-weight:600}
+
+/* ============================================================
+   S&OP CYCLE WHEEL
+   ============================================================ */
+.sop-wheel{
+  display:flex;align-items:center;gap:28px;
+  padding:24px;margin-top:20px;
+  border:1px solid var(--line-mid);border-radius:10px;
+  background:var(--bg-2);
+}
+.sop-wheel-viz{flex-shrink:0;width:260px;height:260px;position:relative}
+.sop-wheel-viz svg{width:100%;height:100%}
+.sop-center{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  font-family:var(--font-sans);pointer-events:none;
+  text-align:center;
+}
+.sop-center .big{
+  font-size:28px;font-weight:800;color:var(--safety);letter-spacing:-0.03em;line-height:1;
+}
+.sop-center .sm{font-family:var(--font-mono);font-size:10px;color:var(--fg-2);letter-spacing:0.04em;text-transform:uppercase;font-weight:600}
+
+.sop-wheel-list{
+  flex:1;display:flex;flex-direction:column;gap:10px;
+}
+.sop-step{
+  display:grid;grid-template-columns:32px 1fr auto;gap:14px;align-items:center;
+  padding:12px 14px;
+  background:var(--bg-1);border:1px solid var(--line-mid);border-radius:8px;
+  transition:all .2s ease;
+}
+.sop-step:hover{border-color:var(--safety);background:var(--bg-3);transform:translateX(3px)}
+.sop-step-num{
+  width:32px;height:32px;border-radius:8px;
+  display:grid;place-items:center;
+  font-family:var(--font-sans);font-size:12px;font-weight:800;color:#0A0A0A;
+}
+.sop-step:nth-child(1) .sop-step-num{background:var(--safety)}
+.sop-step:nth-child(2) .sop-step-num{background:var(--hivis)}
+.sop-step:nth-child(3) .sop-step-num{background:var(--teal)}
+.sop-step:nth-child(4) .sop-step-num{background:var(--green)}
+.sop-step-body h5{
+  font-family:var(--font-sans);font-size:13px;font-weight:700;color:var(--fg-0);letter-spacing:-0.005em;
+}
+.sop-step-body p{
+  font-family:var(--font-sans);font-size:11.5px;color:var(--fg-2);line-height:1.4;margin-top:2px;font-weight:400;
+}
+.sop-step-week{
+  font-family:var(--font-mono);font-size:10px;color:var(--fg-2);font-weight:600;letter-spacing:0;text-transform:uppercase;
+  padding:3px 8px;background:rgba(0,0,0,0.3);border-radius:3px;
+}
+
+@media (max-width:760px){
+  .sop-wheel{flex-direction:column}
+  .sop-wheel-viz{width:220px;height:220px}
+}
+
+/* Network + Heatmap responsive */
+@media (max-width:700px){
+  .heatmap-grid{grid-template-columns:60px 1fr}
+  .heatmap-row{grid-template-columns:repeat(8,1fr)}
+}
+
+
 .fade-up{opacity:0;transform:translateY(30px);transition:opacity .8s ease, transform .8s ease}
 .fade-up.in{opacity:1;transform:none}
 .fade-up.d1{transition-delay:.1s}
@@ -1175,6 +1396,7 @@ section{position:relative;z-index:2}
     <a href="#hero">Origin</a>
     <a href="#metrics">Board</a>
     <a href="#scope">Scope</a>
+    <a href="#network">Network</a>
     <a href="#experience">Route</a>
     <a href="#projects">Deliveries</a>
     <a href="#stack">Stack</a>
@@ -1326,7 +1548,7 @@ section{position:relative;z-index:2}
         <g>
           <rect x="0" y="390" width="70" height="26" fill="#4A7FB5"/>
           <rect x="0" y="390" width="70" height="3" fill="#2D5B8F"/>
-          <text x="35" y="407" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="7" font-weight="600" letter-spacing="1">BD · 2026</text>
+          <text x="35" y="407" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="7" font-weight="600" letter-spacing="1">BD · 2026</text>
           <g stroke="#2D5B8F" stroke-width="0.5">
             <line x1="10" y1="395" x2="10" y2="413"/><line x1="20" y1="395" x2="20" y2="413"/>
             <line x1="30" y1="395" x2="30" y2="413"/><line x1="40" y1="395" x2="40" y2="413"/>
@@ -1335,7 +1557,7 @@ section{position:relative;z-index:2}
 
           <rect x="72" y="390" width="70" height="26" fill="#5B8F5B"/>
           <rect x="72" y="390" width="70" height="3" fill="#3E6E3E"/>
-          <text x="107" y="407" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="7" font-weight="600" letter-spacing="1">SE · 2024</text>
+          <text x="107" y="407" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="7" font-weight="600" letter-spacing="1">SE · 2024</text>
           <g stroke="#3E6E3E" stroke-width="0.5">
             <line x1="82" y1="395" x2="82" y2="413"/><line x1="92" y1="395" x2="92" y2="413"/>
             <line x1="102" y1="395" x2="102" y2="413"/><line x1="112" y1="395" x2="112" y2="413"/>
@@ -1344,60 +1566,60 @@ section{position:relative;z-index:2}
 
           <rect x="144" y="390" width="70" height="26" fill="#C54545"/>
           <rect x="144" y="390" width="70" height="3" fill="#8A2E2E"/>
-          <text x="179" y="407" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="7" font-weight="600" letter-spacing="1">SAP · PP</text>
+          <text x="179" y="407" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="7" font-weight="600" letter-spacing="1">SAP · PP</text>
 
           <rect x="216" y="390" width="70" height="26" fill="#4A7FB5"/>
           <rect x="216" y="390" width="70" height="3" fill="#2D5B8F"/>
-          <text x="251" y="407" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="7" font-weight="600" letter-spacing="1">KIN · RR</text>
+          <text x="251" y="407" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="7" font-weight="600" letter-spacing="1">KIN · RR</text>
 
           <rect x="288" y="390" width="70" height="26" fill="#FF7A1A"/>
           <rect x="288" y="390" width="70" height="3" fill="#C55A0C"/>
-          <text x="323" y="407" text-anchor="middle" fill="#0A0A0A" font-family="JetBrains Mono" font-size="7" font-weight="700" letter-spacing="1">OTIF 95</text>
+          <text x="323" y="407" text-anchor="middle" fill="#0A0A0A" font-family="Geist Mono" font-size="7" font-weight="700" letter-spacing="1">OTIF 95</text>
         </g>
 
         <!-- Row 2 (stacked) -->
         <g>
           <rect x="12" y="363" width="70" height="26" fill="#C54545" opacity="0.92"/>
           <rect x="12" y="363" width="70" height="3" fill="#8A2E2E"/>
-          <text x="47" y="380" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="7" font-weight="600" letter-spacing="1">MPS · 2025</text>
+          <text x="47" y="380" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="7" font-weight="600" letter-spacing="1">MPS · 2025</text>
 
           <rect x="96" y="363" width="70" height="26" fill="#4A7FB5" opacity="0.92"/>
           <rect x="96" y="363" width="70" height="3" fill="#2D5B8F"/>
-          <text x="131" y="380" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="7" font-weight="600" letter-spacing="1">S&amp;OP</text>
+          <text x="131" y="380" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="7" font-weight="600" letter-spacing="1">S&amp;OP</text>
 
           <rect x="180" y="363" width="70" height="26" fill="#5B8F5B" opacity="0.92"/>
           <rect x="180" y="363" width="70" height="3" fill="#3E6E3E"/>
-          <text x="215" y="380" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="7" font-weight="600" letter-spacing="1">VIT · MBA</text>
+          <text x="215" y="380" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="7" font-weight="600" letter-spacing="1">VIT · MBA</text>
 
           <rect x="264" y="363" width="70" height="26" fill="#F5D547" opacity="0.92"/>
           <rect x="264" y="363" width="70" height="3" fill="#BFA33A"/>
-          <text x="299" y="380" text-anchor="middle" fill="#0A0A0A" font-family="JetBrains Mono" font-size="7" font-weight="700" letter-spacing="1">₹1.8 CR</text>
+          <text x="299" y="380" text-anchor="middle" fill="#0A0A0A" font-family="Geist Mono" font-size="7" font-weight="700" letter-spacing="1">₹1.8 CR</text>
         </g>
 
         <!-- Row 3 (top - fewer) -->
         <g>
           <rect x="42" y="336" width="70" height="26" fill="#4A7FB5" opacity="0.85"/>
           <rect x="42" y="336" width="70" height="3" fill="#2D5B8F"/>
-          <text x="77" y="353" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="7" font-weight="600" letter-spacing="1">FLASK</text>
+          <text x="77" y="353" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="7" font-weight="600" letter-spacing="1">FLASK</text>
 
           <rect x="126" y="336" width="70" height="26" fill="#FF7A1A" opacity="0.85"/>
           <rect x="126" y="336" width="70" height="3" fill="#C55A0C"/>
-          <text x="161" y="353" text-anchor="middle" fill="#0A0A0A" font-family="JetBrains Mono" font-size="7" font-weight="700" letter-spacing="1">PY · SQL</text>
+          <text x="161" y="353" text-anchor="middle" fill="#0A0A0A" font-family="Geist Mono" font-size="7" font-weight="700" letter-spacing="1">PY · SQL</text>
 
           <rect x="210" y="336" width="70" height="26" fill="#5B8F5B" opacity="0.85"/>
           <rect x="210" y="336" width="70" height="3" fill="#3E6E3E"/>
-          <text x="245" y="353" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="7" font-weight="600" letter-spacing="1">ZERO BO</text>
+          <text x="245" y="353" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="7" font-weight="600" letter-spacing="1">ZERO BO</text>
         </g>
 
         <!-- Top single -->
         <g>
           <rect x="80" y="309" width="70" height="26" fill="#C54545" opacity="0.78"/>
           <rect x="80" y="309" width="70" height="3" fill="#8A2E2E"/>
-          <text x="115" y="326" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="7" font-weight="600" letter-spacing="1">ORACLE</text>
+          <text x="115" y="326" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="7" font-weight="600" letter-spacing="1">ORACLE</text>
 
           <rect x="172" y="309" width="70" height="26" fill="#F5D547" opacity="0.78"/>
           <rect x="172" y="309" width="70" height="3" fill="#BFA33A"/>
-          <text x="207" y="326" text-anchor="middle" fill="#0A0A0A" font-family="JetBrains Mono" font-size="7" font-weight="700" letter-spacing="1">$0.5M · OEM</text>
+          <text x="207" y="326" text-anchor="middle" fill="#0A0A0A" font-family="Geist Mono" font-size="7" font-weight="700" letter-spacing="1">$0.5M · OEM</text>
         </g>
       </g>
 
@@ -1437,27 +1659,27 @@ section{position:relative;z-index:2}
         <g>
           <rect x="20" y="390" width="60" height="30" fill="#4A7FB5"/>
           <rect x="20" y="390" width="60" height="3" fill="#2D5B8F"/>
-          <text x="50" y="410" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="8" font-weight="600">MAERSK</text>
+          <text x="50" y="410" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="8" font-weight="600">MAERSK</text>
 
           <rect x="85" y="390" width="60" height="30" fill="#C54545"/>
           <rect x="85" y="390" width="60" height="3" fill="#8A2E2E"/>
-          <text x="115" y="410" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="8" font-weight="600">BD·INT</text>
+          <text x="115" y="410" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="8" font-weight="600">BD·INT</text>
 
           <rect x="150" y="390" width="60" height="30" fill="#5B8F5B"/>
           <rect x="150" y="390" width="60" height="3" fill="#3E6E3E"/>
-          <text x="180" y="410" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="8" font-weight="600">EVERG</text>
+          <text x="180" y="410" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="8" font-weight="600">EVERG</text>
 
           <rect x="215" y="390" width="60" height="30" fill="#FF7A1A"/>
           <rect x="215" y="390" width="60" height="3" fill="#C55A0C"/>
-          <text x="245" y="410" text-anchor="middle" fill="#0A0A0A" font-family="JetBrains Mono" font-size="8" font-weight="700">HAPAG</text>
+          <text x="245" y="410" text-anchor="middle" fill="#0A0A0A" font-family="Geist Mono" font-size="8" font-weight="700">HAPAG</text>
 
           <rect x="280" y="390" width="60" height="30" fill="#4A7FB5"/>
           <rect x="280" y="390" width="60" height="3" fill="#2D5B8F"/>
-          <text x="310" y="410" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="8" font-weight="600">COSCO</text>
+          <text x="310" y="410" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="8" font-weight="600">COSCO</text>
 
           <rect x="345" y="390" width="60" height="30" fill="#C54545"/>
           <rect x="345" y="390" width="60" height="3" fill="#8A2E2E"/>
-          <text x="375" y="410" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="8" font-weight="600">CMA</text>
+          <text x="375" y="410" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="8" font-weight="600">CMA</text>
 
           <rect x="410" y="390" width="22" height="30" fill="#5B8F5B"/>
           <rect x="410" y="390" width="22" height="3" fill="#3E6E3E"/>
@@ -1492,7 +1714,7 @@ section{position:relative;z-index:2}
         </g>
 
         <!-- Ship name -->
-        <text x="260" y="448" text-anchor="middle" fill="#F6EFDD" font-family="JetBrains Mono" font-size="10" letter-spacing="3" font-weight="700">M/V DHEERAJ · IN · 2026</text>
+        <text x="260" y="448" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="10" letter-spacing="3" font-weight="700">M/V DHEERAJ · IN · 2026</text>
       </g>
 
       <!-- GANTRY CRANE 2 (far right over ship) -->
@@ -1553,7 +1775,7 @@ section{position:relative;z-index:2}
         <!-- Trailer -->
         <rect x="20" y="0" width="50" height="22" fill="#F6EFDD"/>
         <rect x="20" y="0" width="50" height="3" fill="#DDD4BC"/>
-        <text x="45" y="14" text-anchor="middle" fill="#0A0A0A" font-family="JetBrains Mono" font-size="6" font-weight="700" letter-spacing="1">SCM·LOG</text>
+        <text x="45" y="14" text-anchor="middle" fill="#0A0A0A" font-family="Geist Mono" font-size="6" font-weight="700" letter-spacing="1">SCM·LOG</text>
         <!-- Wheels -->
         <circle cx="6" cy="24" r="3" fill="#0A0A0A"/>
         <circle cx="30" cy="24" r="3" fill="#0A0A0A"/>
@@ -1652,10 +1874,10 @@ section{position:relative;z-index:2}
         <div class="waybill-row"><span class="k">Shipper</span><span class="v">Becton Dickinson · IN</span></div>
         <div class="waybill-row"><span class="k">Role</span><span class="v">E2E Planner</span></div>
         <div class="waybill-row"><span class="k">Industry</span><span class="v">Pharma / MedDev</span></div>
-        <div class="waybill-row"><span class="k">Purchasing spend</span><span class="v"><em>$30M+</em> / Yr</span></div>
+        <div class="waybill-row"><span class="k">Procurment spend</span><span class="v"><em>$30M+</em> / yr</span></div>
         <div class="waybill-row"><span class="k">Suppliers</span><span class="v">15+ global</span></div>
         <div class="waybill-row"><span class="k">OTIF Live</span><span class="v green">95.2%</span></div>
-        <div class="waybill-row"><span class="k">Status</span><span class="v green">Learning SCM</span></div>
+        <div class="waybill-row"><span class="k">Status</span><span class="v green">Figuring out - SCM</span></div>
       </div>
       <div class="waybill-foot">
         <div class="barcode">
@@ -1743,7 +1965,7 @@ section{position:relative;z-index:2}
               <line x1="165" y1="50" x2="159" y2="56"/>
               <line x1="210" y1="120" x2="210" y2="110"/>
             </g>
-            <g fill="var(--fg-3)" font-family="JetBrains Mono" font-size="10" font-weight="500">
+            <g fill="var(--fg-3)" font-family="Geist Mono" font-size="10" font-weight="500">
               <text x="22" y="138">0</text>
               <text x="110" y="20">50</text>
               <text x="198" y="138">100</text>
@@ -1773,7 +1995,7 @@ section{position:relative;z-index:2}
               <rect x="25" y="22" width="110" height="20" fill="var(--container-green)" rx="2"/>
               <rect x="45" y="0" width="80" height="20" fill="var(--safety)" rx="2" opacity="0.8"/>
             </g>
-            <g font-family="JetBrains Mono" font-size="7" fill="#0A0A0A" letter-spacing="1" font-weight="700">
+            <g font-family="Geist Mono" font-size="7" fill="#0A0A0A" letter-spacing="1" font-weight="700">
               <text x="28" y="124">BD·2026·A1</text>
               <text x="38" y="102">BD·2026·B1</text>
               <text x="23" y="80" fill="#F6EFDD">BD·2026·C1</text>
@@ -1798,10 +2020,10 @@ section{position:relative;z-index:2}
             <path d="M 30,45 L 90,15 L 150,45 L 150,122 L 30,122 Z" fill="none" stroke="var(--fg-3)" stroke-width="1.4" stroke-dasharray="3 3"/>
             <rect x="33" y="55" width="114" height="65" fill="var(--red)" opacity="0.18"/>
             <line x1="30" y1="55" x2="150" y2="55" stroke="var(--red)" stroke-width="1" stroke-dasharray="4 3"/>
-            <text x="155" y="58" fill="var(--red)" font-family="JetBrains Mono" font-size="9" font-weight="500">PREV</text>
+            <text x="155" y="58" fill="var(--red)" font-family="Geist Mono" font-size="9" font-weight="500">PREV</text>
             <rect x="33" y="78" width="114" height="42" fill="var(--safety)" opacity="0.6"/>
             <line x1="30" y1="78" x2="150" y2="78" stroke="var(--safety)" stroke-width="2"/>
-            <text x="155" y="80" fill="var(--safety)" font-family="JetBrains Mono" font-size="9" font-weight="600">NOW</text>
+            <text x="155" y="80" fill="var(--safety)" font-family="Geist Mono" font-size="9" font-weight="600">NOW</text>
             <g fill="var(--safety)" opacity="0.8">
               <rect x="36" y="105" width="14" height="14" rx="1"/>
               <rect x="54" y="105" width="14" height="14" rx="1"/>
@@ -1836,7 +2058,7 @@ section{position:relative;z-index:2}
             </g>
             <rect x="10" y="40" width="160" height="60" fill="var(--teal)" opacity="0.08"/>
             <line x1="10" y1="40" x2="170" y2="40" stroke="var(--teal)" stroke-width="1" stroke-dasharray="3 3"/>
-            <text x="12" y="38" fill="var(--teal)" font-family="JetBrains Mono" font-size="8" letter-spacing="1" font-weight="500">TARGET &lt;12%</text>
+            <text x="12" y="38" fill="var(--teal)" font-family="Geist Mono" font-size="8" letter-spacing="1" font-weight="500">TARGET &lt;12%</text>
             <path d="M10,75 Q30,65 50,72 T90,68 T130,72 T170,66" stroke="var(--teal)" stroke-width="1.5" fill="none" stroke-dasharray="2 2" opacity="0.7"/>
             <path class="spark" d="M10,78 Q30,68 50,75 T90,72 T130,76 T170,70" stroke="var(--safety)" stroke-width="2.5" fill="none"/>
             <g fill="var(--safety)">
@@ -1846,7 +2068,7 @@ section{position:relative;z-index:2}
               <circle cx="130" cy="76" r="2.5"/>
               <circle cx="170" cy="70" r="3"/>
             </g>
-            <g fill="var(--fg-3)" font-family="JetBrains Mono" font-size="8" font-weight="500">
+            <g fill="var(--fg-3)" font-family="Geist Mono" font-size="8" font-weight="500">
               <text x="8" y="125">Q1</text>
               <text x="48" y="125">Q2</text>
               <text x="88" y="125">Q3</text>
@@ -1859,6 +2081,85 @@ section{position:relative;z-index:2}
         <div class="metric-sub">Demand accuracy · <strong>₹1.8 Cr</strong> excess inventory cut at Schneider</div>
       </div>
 
+    </div>
+  </div>
+
+  <!-- INVENTORY HEATMAP -->
+  <div class="heatmap-panel fade-up">
+    <div class="heatmap-head">
+      <div class="heatmap-title">Inventory Health · SKU Velocity Matrix</div>
+      <div class="heatmap-meta">
+        <span>WINDOW <b>LAST 16 WEEKS</b></span>
+        <span>SKUS <b>TOP 48</b></span>
+      </div>
+    </div>
+
+    <div class="heatmap-grid">
+      <div class="heatmap-row-label"><span class="seg a">A</span> Fast</div>
+      <div class="heatmap-row">
+        <span class="heat-cell h3"></span><span class="heat-cell h4"></span><span class="heat-cell h5"></span><span class="heat-cell h4"></span>
+        <span class="heat-cell h4"></span><span class="heat-cell h3"></span><span class="heat-cell h4"></span><span class="heat-cell h5"></span>
+        <span class="heat-cell h5"></span><span class="heat-cell h4"></span><span class="heat-cell h4"></span><span class="heat-cell h5"></span>
+        <span class="heat-cell h4"></span><span class="heat-cell h5"></span><span class="heat-cell h4"></span><span class="heat-cell h4"></span>
+      </div>
+
+      <div class="heatmap-row-label"><span class="seg a">A</span> Fast</div>
+      <div class="heatmap-row">
+        <span class="heat-cell h4"></span><span class="heat-cell h3"></span><span class="heat-cell h4"></span><span class="heat-cell h5"></span>
+        <span class="heat-cell h4"></span><span class="heat-cell h4"></span><span class="heat-cell h5"></span><span class="heat-cell h4"></span>
+        <span class="heat-cell h4"></span><span class="heat-cell h3"></span><span class="heat-cell h4"></span><span class="heat-cell h4"></span>
+        <span class="heat-cell h5"></span><span class="heat-cell h4"></span><span class="heat-cell h4"></span><span class="heat-cell h5"></span>
+      </div>
+
+      <div class="heatmap-row-label"><span class="seg b">B</span> Med</div>
+      <div class="heatmap-row">
+        <span class="heat-cell h3"></span><span class="heat-cell h4"></span><span class="heat-cell h2"></span><span class="heat-cell h3"></span>
+        <span class="heat-cell h4"></span><span class="heat-cell h4"></span><span class="heat-cell h3"></span><span class="heat-cell h4"></span>
+        <span class="heat-cell h3"></span><span class="heat-cell h4"></span><span class="heat-cell h4"></span><span class="heat-cell h3"></span>
+        <span class="heat-cell h4"></span><span class="heat-cell h3"></span><span class="heat-cell h4"></span><span class="heat-cell h4"></span>
+      </div>
+
+      <div class="heatmap-row-label"><span class="seg b">B</span> Med</div>
+      <div class="heatmap-row">
+        <span class="heat-cell h2"></span><span class="heat-cell h3"></span><span class="heat-cell h4"></span><span class="heat-cell h3"></span>
+        <span class="heat-cell h3"></span><span class="heat-cell h4"></span><span class="heat-cell h4"></span><span class="heat-cell h3"></span>
+        <span class="heat-cell h4"></span><span class="heat-cell h4"></span><span class="heat-cell h3"></span><span class="heat-cell h4"></span>
+        <span class="heat-cell h3"></span><span class="heat-cell h4"></span><span class="heat-cell h4"></span><span class="heat-cell h3"></span>
+      </div>
+
+      <div class="heatmap-row-label"><span class="seg c">C</span> Slow</div>
+      <div class="heatmap-row">
+        <span class="heat-cell h2"></span><span class="heat-cell h1"></span><span class="heat-cell h3"></span><span class="heat-cell h4"></span>
+        <span class="heat-cell h4"></span><span class="heat-cell h3"></span><span class="heat-cell h2"></span><span class="heat-cell h3"></span>
+        <span class="heat-cell h3"></span><span class="heat-cell h4"></span><span class="heat-cell h3"></span><span class="heat-cell h3"></span>
+        <span class="heat-cell h4"></span><span class="heat-cell h3"></span><span class="heat-cell h3"></span><span class="heat-cell h4"></span>
+      </div>
+
+      <div class="heatmap-row-label"><span class="seg c">C</span> Slow</div>
+      <div class="heatmap-row">
+        <span class="heat-cell h1"></span><span class="heat-cell h2"></span><span class="heat-cell h0"></span><span class="heat-cell h2"></span>
+        <span class="heat-cell h3"></span><span class="heat-cell h3"></span><span class="heat-cell h4"></span><span class="heat-cell h3"></span>
+        <span class="heat-cell h3"></span><span class="heat-cell h3"></span><span class="heat-cell h4"></span><span class="heat-cell h3"></span>
+        <span class="heat-cell h3"></span><span class="heat-cell h4"></span><span class="heat-cell h3"></span><span class="heat-cell h4"></span>
+      </div>
+    </div>
+
+    <div class="heatmap-footer">
+      <div class="heatmap-scale">
+        <span>DoH:</span>
+        <div class="scale-bar">
+          <span style="background:rgba(255,90,90,0.25)"></span>
+          <span style="background:rgba(255,122,26,0.3)"></span>
+          <span style="background:rgba(245,213,71,0.35)"></span>
+          <span style="background:rgba(63,176,166,0.3)"></span>
+          <span style="background:rgba(110,231,168,0.45)"></span>
+          <span style="background:rgba(110,231,168,0.75)"></span>
+        </div>
+        <span>&lt;7d → 60d+</span>
+      </div>
+      <div class="heatmap-note">
+        A/B/C segmentation across <b>48 top SKUs</b> · 96% in healthy DoH band · proactive replenishment on outliers
+      </div>
     </div>
   </div>
 </section>
@@ -1962,13 +2263,395 @@ section{position:relative;z-index:2}
   </div>
 </section>
 
+<!-- Conveyor divider -->
+<div class="conveyor-divider">
+  <span class="conveyor-label">SUPPLY NETWORK · LIVE TOPOLOGY</span>
+</div>
+
+<!-- ============================================================
+     SUPPLY CHAIN NETWORK · Topology + S&OP
+     ============================================================ -->
+<section class="network wrap" id="network">
+  <header class="section-head">
+    <div class="section-head-left">
+      <div class="section-num"><span class="n">03</span>NETWORK · MULTI-TIER FLOW</div>
+      <h2 class="fade-up">The network <em>I run.</em></h2>
+    </div>
+    <p class="section-head-note">Multi-tier supplier network feeding production and distribution · managed daily in Kinaxis Rapid Response.</p>
+  </header>
+
+  <div class="network-card fade-up">
+    <div class="network-head">
+      <div class="network-head-title">Supply Network Topology</div>
+      <div class="network-head-meta">
+        <span>NODES <b>34</b></span>
+        <span>FLOWS <b>52</b></span>
+        <span>TIER <b>T2 → CUST</b></span>
+        <span class="live"><span class="pulse-dot"></span>LIVE</span>
+      </div>
+    </div>
+
+    <div class="network-viz">
+      <svg viewBox="0 0 1100 420" preserveAspectRatio="xMidYMid meet" width="100%" style="position:relative;z-index:1">
+        <defs>
+          <!-- gradients -->
+          <radialGradient id="nGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FF7A1A" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#FF7A1A" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="flowOrange" x1="0%" x2="100%" y1="0%" y2="0%">
+            <stop offset="0%" stop-color="#FF7A1A" stop-opacity="0.2"/>
+            <stop offset="100%" stop-color="#FF7A1A" stop-opacity="0.8"/>
+          </linearGradient>
+          <linearGradient id="flowGreen" x1="0%" x2="100%" y1="0%" y2="0%">
+            <stop offset="0%" stop-color="#6EE7A8" stop-opacity="0.2"/>
+            <stop offset="100%" stop-color="#6EE7A8" stop-opacity="0.8"/>
+          </linearGradient>
+
+          <!-- packet markers -->
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3"/>
+          </filter>
+        </defs>
+
+        <!-- Column headers -->
+        <g font-family="Geist Mono" font-size="10" fill="#8F8874" font-weight="600" letter-spacing="1">
+          <text x="100" y="30" text-anchor="middle" fill="#5C5742">TIER 2</text>
+          <text x="100" y="44" text-anchor="middle" fill="#F5D547">RAW MATERIAL</text>
+
+          <text x="330" y="30" text-anchor="middle" fill="#5C5742">TIER 1</text>
+          <text x="330" y="44" text-anchor="middle" fill="#FF7A1A">COMPONENT SUPP.</text>
+
+          <text x="560" y="30" text-anchor="middle" fill="#5C5742">PLANTS</text>
+          <text x="560" y="44" text-anchor="middle" fill="#F6EFDD">MANUFACTURING</text>
+
+          <text x="790" y="30" text-anchor="middle" fill="#5C5742">DC / WAREHOUSE</text>
+          <text x="790" y="44" text-anchor="middle" fill="#3FB0A6">DISTRIBUTION</text>
+
+          <text x="1020" y="30" text-anchor="middle" fill="#5C5742">DEMAND</text>
+          <text x="1020" y="44" text-anchor="middle" fill="#6EE7A8">CUSTOMERS</text>
+        </g>
+
+        <!-- Column dividers (faint) -->
+        <g stroke="rgba(255,255,255,0.04)" stroke-dasharray="2 6">
+          <line x1="215" y1="60" x2="215" y2="400"/>
+          <line x1="445" y1="60" x2="445" y2="400"/>
+          <line x1="675" y1="60" x2="675" y2="400"/>
+          <line x1="905" y1="60" x2="905" y2="400"/>
+        </g>
+
+        <!-- ============ FLOW PATHS ============ -->
+        <!-- T2 → T1 flows -->
+        <g fill="none" stroke-width="1.5">
+          <path class="flow-line" stroke="#F5D547" opacity="0.5" d="M 100,110 C 200,110 230,140 330,140"/>
+          <path class="flow-line" stroke="#F5D547" opacity="0.4" d="M 100,110 C 200,110 230,240 330,240"/>
+          <path class="flow-line" stroke="#F5D547" opacity="0.5" d="M 100,210 C 200,210 230,140 330,140"/>
+          <path class="flow-line" stroke="#F5D547" opacity="0.4" d="M 100,210 C 200,210 230,240 330,240"/>
+          <path class="flow-line" stroke="#F5D547" opacity="0.4" d="M 100,310 C 200,310 230,340 330,340"/>
+          <path class="flow-line" stroke="#F5D547" opacity="0.4" d="M 100,310 C 200,310 230,240 330,240"/>
+        </g>
+
+        <!-- T1 → Plants flows -->
+        <g fill="none" stroke-width="1.8">
+          <path id="flow-t1p-1" class="flow-line" stroke="url(#flowOrange)" d="M 330,140 C 430,140 460,180 560,180"/>
+          <path id="flow-t1p-2" class="flow-line" stroke="url(#flowOrange)" d="M 330,140 C 430,140 460,270 560,270"/>
+          <path id="flow-t1p-3" class="flow-line" stroke="url(#flowOrange)" d="M 330,240 C 430,240 460,180 560,180"/>
+          <path id="flow-t1p-4" class="flow-line" stroke="url(#flowOrange)" d="M 330,240 C 430,240 460,270 560,270"/>
+          <path id="flow-t1p-5" class="flow-line" stroke="url(#flowOrange)" d="M 330,340 C 430,340 460,270 560,270"/>
+        </g>
+
+        <!-- Plants → DCs flows -->
+        <g fill="none" stroke-width="2">
+          <path id="flow-pd-1" class="flow-line" stroke="#3FB0A6" opacity="0.8" d="M 560,180 C 660,180 690,160 790,160"/>
+          <path id="flow-pd-2" class="flow-line" stroke="#3FB0A6" opacity="0.8" d="M 560,180 C 660,180 690,240 790,240"/>
+          <path id="flow-pd-3" class="flow-line" stroke="#3FB0A6" opacity="0.8" d="M 560,270 C 660,270 690,240 790,240"/>
+          <path id="flow-pd-4" class="flow-line" stroke="#3FB0A6" opacity="0.8" d="M 560,270 C 660,270 690,320 790,320"/>
+        </g>
+
+        <!-- DCs → Customers flows -->
+        <g fill="none" stroke-width="2">
+          <path id="flow-dc-1" class="flow-line" stroke="url(#flowGreen)" d="M 790,160 C 890,160 920,140 1020,140"/>
+          <path id="flow-dc-2" class="flow-line" stroke="url(#flowGreen)" d="M 790,160 C 890,160 920,220 1020,220"/>
+          <path id="flow-dc-3" class="flow-line" stroke="url(#flowGreen)" d="M 790,240 C 890,240 920,220 1020,220"/>
+          <path id="flow-dc-4" class="flow-line" stroke="url(#flowGreen)" d="M 790,240 C 890,240 920,300 1020,300"/>
+          <path id="flow-dc-5" class="flow-line" stroke="url(#flowGreen)" d="M 790,320 C 890,320 920,300 1020,300"/>
+        </g>
+
+        <!-- ============ MOVING PACKETS ============ -->
+        <g>
+          <circle r="4" class="packet">
+            <animateMotion dur="4s" repeatCount="indefinite" rotate="auto">
+              <mpath href="#flow-t1p-2"/>
+            </animateMotion>
+          </circle>
+          <circle r="4" class="packet">
+            <animateMotion dur="5s" repeatCount="indefinite" begin="1s">
+              <mpath href="#flow-pd-1"/>
+            </animateMotion>
+          </circle>
+          <circle r="4" class="packet" style="fill:var(--green);filter:drop-shadow(0 0 6px var(--green))">
+            <animateMotion dur="3s" repeatCount="indefinite" begin="2s">
+              <mpath href="#flow-dc-2"/>
+            </animateMotion>
+          </circle>
+          <circle r="4" class="packet" style="fill:var(--green);filter:drop-shadow(0 0 6px var(--green))">
+            <animateMotion dur="3.5s" repeatCount="indefinite" begin="0.5s">
+              <mpath href="#flow-dc-4"/>
+            </animateMotion>
+          </circle>
+        </g>
+
+        <!-- ============ NODES ============ -->
+        <!-- T2 nodes -->
+        <g>
+          <g transform="translate(100,110)">
+            <circle r="22" fill="url(#nGlow)" opacity="0.7"/>
+            <rect x="-14" y="-14" width="28" height="28" rx="4" fill="#111F34" stroke="#F5D547" stroke-width="1.5" class="node-pulse"/>
+            <text y="4" text-anchor="middle" fill="#F5D547" font-family="Geist" font-size="11" font-weight="800">T2</text>
+            <text y="50" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">STEEL · US</text>
+          </g>
+          <g transform="translate(100,210)">
+            <circle r="22" fill="url(#nGlow)" opacity="0.7"/>
+            <rect x="-14" y="-14" width="28" height="28" rx="4" fill="#111F34" stroke="#F5D547" stroke-width="1.5" class="node-pulse d1"/>
+            <text y="4" text-anchor="middle" fill="#F5D547" font-family="Geist" font-size="11" font-weight="800">T2</text>
+            <text y="50" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">RESIN · SEA</text>
+          </g>
+          <g transform="translate(100,310)">
+            <circle r="22" fill="url(#nGlow)" opacity="0.7"/>
+            <rect x="-14" y="-14" width="28" height="28" rx="4" fill="#111F34" stroke="#F5D547" stroke-width="1.5" class="node-pulse d2"/>
+            <text y="4" text-anchor="middle" fill="#F5D547" font-family="Geist" font-size="11" font-weight="800">T2</text>
+            <text y="50" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">GLASS · IN</text>
+          </g>
+        </g>
+
+        <!-- T1 nodes (larger - component suppliers) -->
+        <g>
+          <g transform="translate(330,140)">
+            <circle r="28" fill="url(#nGlow)"/>
+            <rect x="-22" y="-18" width="44" height="36" rx="5" fill="#1A2B44" stroke="#FF7A1A" stroke-width="2" class="node-pulse"/>
+            <text y="-2" text-anchor="middle" fill="#FF7A1A" font-family="Geist" font-size="13" font-weight="800">T1</text>
+            <text y="11" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="8" font-weight="600">SUP·A</text>
+            <text y="56" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">PRECISION · DE</text>
+            <text y="68" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">LT 14d</text>
+          </g>
+          <g transform="translate(330,240)">
+            <circle r="28" fill="url(#nGlow)"/>
+            <rect x="-22" y="-18" width="44" height="36" rx="5" fill="#1A2B44" stroke="#FF7A1A" stroke-width="2" class="node-pulse d1"/>
+            <text y="-2" text-anchor="middle" fill="#FF7A1A" font-family="Geist" font-size="13" font-weight="800">T1</text>
+            <text y="11" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="8" font-weight="600">SUP·B</text>
+            <text y="56" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">ELECTRO · CN</text>
+            <text y="68" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">LT 21d</text>
+          </g>
+          <g transform="translate(330,340)">
+            <circle r="28" fill="url(#nGlow)"/>
+            <rect x="-22" y="-18" width="44" height="36" rx="5" fill="#1A2B44" stroke="#FF7A1A" stroke-width="2" class="node-pulse d2"/>
+            <text y="-2" text-anchor="middle" fill="#FF7A1A" font-family="Geist" font-size="13" font-weight="800">T1</text>
+            <text y="11" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="8" font-weight="600">SUP·C</text>
+            <text y="56" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">PACK · IN</text>
+            <text y="68" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">LT 7d</text>
+          </g>
+        </g>
+
+        <!-- Plants (factories - square with chimney symbol) -->
+        <g>
+          <g transform="translate(560,180)">
+            <circle r="34" fill="rgba(110,231,168,0.06)"/>
+            <rect x="-26" y="-22" width="52" height="44" rx="6" fill="#1A2B44" stroke="#F6EFDD" stroke-width="2" class="node-pulse"/>
+            <!-- factory icon -->
+            <rect x="-18" y="-8" width="10" height="18" fill="#F6EFDD" opacity="0.2"/>
+            <rect x="-6" y="-14" width="10" height="24" fill="#F6EFDD" opacity="0.25"/>
+            <rect x="6" y="-8" width="12" height="18" fill="#F6EFDD" opacity="0.2"/>
+            <text y="-30" text-anchor="middle" fill="#F6EFDD" font-family="Geist" font-size="10" font-weight="800">PLANT·1</text>
+            <text y="60" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">GURUGRAM · IN</text>
+            <text y="72" text-anchor="middle" fill="#6EE7A8" font-family="Geist Mono" font-size="8" font-weight="600">OEE 82%</text>
+          </g>
+          <g transform="translate(560,270)">
+            <circle r="34" fill="rgba(110,231,168,0.06)"/>
+            <rect x="-26" y="-22" width="52" height="44" rx="6" fill="#1A2B44" stroke="#F6EFDD" stroke-width="2" class="node-pulse d1"/>
+            <rect x="-18" y="-8" width="10" height="18" fill="#F6EFDD" opacity="0.2"/>
+            <rect x="-6" y="-14" width="10" height="24" fill="#F6EFDD" opacity="0.25"/>
+            <rect x="6" y="-8" width="12" height="18" fill="#F6EFDD" opacity="0.2"/>
+            <text y="-30" text-anchor="middle" fill="#F6EFDD" font-family="Geist" font-size="10" font-weight="800">PLANT·2</text>
+            <text y="60" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">HYD · IN</text>
+            <text y="72" text-anchor="middle" fill="#6EE7A8" font-family="Geist Mono" font-size="8" font-weight="600">OEE 78%</text>
+          </g>
+        </g>
+
+        <!-- DCs (warehouses) -->
+        <g>
+          <g transform="translate(790,160)">
+            <circle r="28" fill="rgba(63,176,166,0.08)"/>
+            <path d="M -22,-12 L 0,-22 L 22,-12 L 22,18 L -22,18 Z" fill="#1A2B44" stroke="#3FB0A6" stroke-width="2" class="node-pulse"/>
+            <rect x="-10" y="0" width="8" height="14" fill="#3FB0A6" opacity="0.3"/>
+            <rect x="2" y="0" width="8" height="14" fill="#3FB0A6" opacity="0.3"/>
+            <text y="50" text-anchor="middle" fill="#3FB0A6" font-family="Geist" font-size="10" font-weight="800">DC · NORTH</text>
+          </g>
+          <g transform="translate(790,240)">
+            <circle r="28" fill="rgba(63,176,166,0.08)"/>
+            <path d="M -22,-12 L 0,-22 L 22,-12 L 22,18 L -22,18 Z" fill="#1A2B44" stroke="#3FB0A6" stroke-width="2" class="node-pulse d1"/>
+            <rect x="-10" y="0" width="8" height="14" fill="#3FB0A6" opacity="0.3"/>
+            <rect x="2" y="0" width="8" height="14" fill="#3FB0A6" opacity="0.3"/>
+            <text y="50" text-anchor="middle" fill="#3FB0A6" font-family="Geist" font-size="10" font-weight="800">DC · CENTRAL</text>
+          </g>
+          <g transform="translate(790,320)">
+            <circle r="28" fill="rgba(63,176,166,0.08)"/>
+            <path d="M -22,-12 L 0,-22 L 22,-12 L 22,18 L -22,18 Z" fill="#1A2B44" stroke="#3FB0A6" stroke-width="2" class="node-pulse d2"/>
+            <rect x="-10" y="0" width="8" height="14" fill="#3FB0A6" opacity="0.3"/>
+            <rect x="2" y="0" width="8" height="14" fill="#3FB0A6" opacity="0.3"/>
+            <text y="50" text-anchor="middle" fill="#3FB0A6" font-family="Geist" font-size="10" font-weight="800">DC · SOUTH</text>
+          </g>
+        </g>
+
+        <!-- Customers (circular demand nodes) -->
+        <g>
+          <g transform="translate(1020,140)">
+            <circle r="24" fill="rgba(110,231,168,0.1)"/>
+            <circle r="16" fill="#1A2B44" stroke="#6EE7A8" stroke-width="2" class="node-pulse"/>
+            <circle r="6" fill="#6EE7A8"/>
+            <text y="42" text-anchor="middle" fill="#6EE7A8" font-family="Geist" font-size="10" font-weight="800">HOSP · A</text>
+          </g>
+          <g transform="translate(1020,220)">
+            <circle r="24" fill="rgba(110,231,168,0.1)"/>
+            <circle r="16" fill="#1A2B44" stroke="#6EE7A8" stroke-width="2" class="node-pulse d1"/>
+            <circle r="6" fill="#6EE7A8"/>
+            <text y="42" text-anchor="middle" fill="#6EE7A8" font-family="Geist" font-size="10" font-weight="800">DISTR · B</text>
+          </g>
+          <g transform="translate(1020,300)">
+            <circle r="24" fill="rgba(110,231,168,0.1)"/>
+            <circle r="16" fill="#1A2B44" stroke="#6EE7A8" stroke-width="2" class="node-pulse d2"/>
+            <circle r="6" fill="#6EE7A8"/>
+            <text y="42" text-anchor="middle" fill="#6EE7A8" font-family="Geist" font-size="10" font-weight="800">RETAIL · C</text>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div class="network-legend">
+      <div class="network-legend-items">
+        <div class="network-legend-item"><span class="sw" style="background:#F5D547"></span>T2 · Raw Materials</div>
+        <div class="network-legend-item"><span class="sw" style="background:#FF7A1A"></span>T1 · Components</div>
+        <div class="network-legend-item"><span class="sw" style="background:#F6EFDD"></span>Plants · OEE tracked</div>
+        <div class="network-legend-item"><span class="sw" style="background:#3FB0A6"></span>Distribution Centers</div>
+        <div class="network-legend-item"><span class="sw" style="background:#6EE7A8"></span>Customers</div>
+      </div>
+      <div class="network-legend-stats">
+        <span>OTIF <b>95%+</b></span>
+        <span>LEAD <b>-12d</b></span>
+        <span>NODES <b>15+ suppliers</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- S&OP CYCLE WHEEL -->
+  <div class="sop-wheel fade-up">
+    <div class="sop-wheel-viz">
+      <svg viewBox="0 0 260 260">
+        <defs>
+          <linearGradient id="wheelGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FF7A1A" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="#FF7A1A" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+
+        <!-- outer ring -->
+        <circle cx="130" cy="130" r="110" fill="url(#wheelGrad)" stroke="rgba(255,122,26,0.2)" stroke-width="1" stroke-dasharray="3 5"/>
+        <!-- 4 quarters with separator lines -->
+        <circle cx="130" cy="130" r="100" fill="none" stroke="rgba(255,255,255,0.05)"/>
+
+        <!-- Step 1 - Top (0deg) -->
+        <g>
+          <path d="M 130,30 A 100,100 0 0 1 200.7,59.3 L 130,130 Z" fill="rgba(255,122,26,0.12)" stroke="var(--safety)" stroke-width="1"/>
+          <text x="165" y="62" text-anchor="middle" fill="#FF7A1A" font-family="Geist" font-size="11" font-weight="800" letter-spacing="1">DEMAND</text>
+          <text x="165" y="76" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="500">REVIEW</text>
+        </g>
+
+        <!-- Step 2 - Right (90deg) -->
+        <g>
+          <path d="M 200.7,59.3 A 100,100 0 0 1 200.7,200.7 L 130,130 Z" fill="rgba(245,213,71,0.12)" stroke="var(--hivis)" stroke-width="1"/>
+          <text x="198" y="135" text-anchor="middle" fill="#F5D547" font-family="Geist" font-size="11" font-weight="800" letter-spacing="1">SUPPLY</text>
+          <text x="198" y="149" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="500">REVIEW</text>
+        </g>
+
+        <!-- Step 3 - Bottom (180deg) -->
+        <g>
+          <path d="M 200.7,200.7 A 100,100 0 0 1 59.3,200.7 L 130,130 Z" fill="rgba(63,176,166,0.12)" stroke="var(--teal)" stroke-width="1"/>
+          <text x="130" y="208" text-anchor="middle" fill="#3FB0A6" font-family="Geist" font-size="11" font-weight="800" letter-spacing="1">INTEGRATED</text>
+          <text x="130" y="222" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="500">RECONCILIATION</text>
+        </g>
+
+        <!-- Step 4 - Left (270deg) -->
+        <g>
+          <path d="M 59.3,200.7 A 100,100 0 0 1 59.3,59.3 L 130,130 Z" fill="rgba(110,231,168,0.12)" stroke="var(--green)" stroke-width="1"/>
+          <text x="62" y="135" text-anchor="middle" fill="#6EE7A8" font-family="Geist" font-size="11" font-weight="800" letter-spacing="1">EXEC</text>
+          <text x="62" y="149" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="500">REVIEW</text>
+        </g>
+
+        <!-- Arrow indicators (flow direction) -->
+        <g fill="#F6EFDD" opacity="0.4">
+          <path d="M 195,35 L 201,30 L 201,40 Z"/>
+          <path d="M 225,195 L 230,201 L 220,201 Z"/>
+          <path d="M 65,225 L 59,230 L 59,220 Z"/>
+          <path d="M 35,65 L 30,59 L 40,59 Z"/>
+        </g>
+
+        <!-- Center hub -->
+        <circle cx="130" cy="130" r="32" fill="#0B1628" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      </svg>
+      <div class="sop-center">
+        <span class="big">S&amp;OP</span>
+        <span class="sm">Monthly Cadence</span>
+      </div>
+    </div>
+
+    <div class="sop-wheel-list">
+      <div class="sop-step">
+        <div class="sop-step-num">1</div>
+        <div class="sop-step-body">
+          <h5>Demand Review</h5>
+          <p>Consensus forecast · MAPE &lt;12% · SKU segmentation</p>
+        </div>
+        <span class="sop-step-week">Wk 1</span>
+      </div>
+      <div class="sop-step">
+        <div class="sop-step-num">2</div>
+        <div class="sop-step-body">
+          <h5>Supply Review</h5>
+          <p>Capacity · material availability · supplier constraints</p>
+        </div>
+        <span class="sop-step-week">Wk 2</span>
+      </div>
+      <div class="sop-step">
+        <div class="sop-step-num">3</div>
+        <div class="sop-step-body">
+          <h5>Integrated Reconciliation</h5>
+          <p>Scenario modelling · gap closure · risk mitigation</p>
+        </div>
+        <span class="sop-step-week">Wk 3</span>
+      </div>
+      <div class="sop-step">
+        <div class="sop-step-num">4</div>
+        <div class="sop-step-body">
+          <h5>Executive Review</h5>
+          <p>Final plan · financial alignment · commit to execute</p>
+        </div>
+        <span class="sop-step-week">Wk 4</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Conveyor divider -->
+<div class="conveyor-divider">
+  <span class="conveyor-label">CAREER ROUTE · SHIPPING HISTORY</span>
+</div>
+
 <!-- ============================================================
      EXPERIENCE · ROUTE LOG
      ============================================================ -->
 <section class="experience wrap" id="experience">
   <header class="section-head">
     <div class="section-head-left">
-      <div class="section-num"><span class="n">03</span>ROUTE · SHIPPING HISTORY</div>
+      <div class="section-num"><span class="n">04</span>ROUTE · SHIPPING HISTORY</div>
       <h2 class="fade-up">Four years, <em>two industries.</em></h2>
     </div>
     <p class="section-head-note">Plotted as a schedule — field posts, education, and certifications on one timeline.</p>
@@ -2230,7 +2913,7 @@ section{position:relative;z-index:2}
 <section class="case wrap" id="case-study">
   <header class="section-head">
     <div class="section-head-left">
-      <div class="section-num"><span class="n">04</span>FLAGSHIP · OTIF TURNAROUND</div>
+      <div class="section-num"><span class="n">05</span>FLAGSHIP · OTIF TURNAROUND</div>
       <h2 class="fade-up">75 → 90, <em>in six.</em></h2>
     </div>
     <p class="section-head-note">Flagship programme at Schneider Electric · delivered, measured, and sustained for 18+ months.</p>
@@ -2271,7 +2954,7 @@ section{position:relative;z-index:2}
           <line x1="30" y1="220" x2="490" y2="220"/>
         </g>
 
-        <g fill="var(--fg-3)" font-family="JetBrains Mono" font-size="10" font-weight="500">
+        <g fill="var(--fg-3)" font-family="Geist Mono" font-size="10" font-weight="500">
           <text x="5" y="44">100</text>
           <text x="10" y="104">90</text>
           <text x="10" y="164">80</text>
@@ -2279,10 +2962,10 @@ section{position:relative;z-index:2}
         </g>
 
         <line x1="30" y1="190" x2="490" y2="190" stroke="var(--red)" stroke-width="1" stroke-dasharray="4 4" opacity="0.7"/>
-        <text x="495" y="193" fill="var(--red)" font-family="JetBrains Mono" font-size="9" font-weight="500">BASELINE 75%</text>
+        <text x="495" y="193" fill="var(--red)" font-family="Geist Mono" font-size="9" font-weight="500">BASELINE 75%</text>
 
         <line x1="30" y1="100" x2="490" y2="100" stroke="var(--green)" stroke-width="1" stroke-dasharray="4 4" opacity="0.7"/>
-        <text x="495" y="103" fill="var(--green)" font-family="JetBrains Mono" font-size="9" font-weight="500">TARGET 90%</text>
+        <text x="495" y="103" fill="var(--green)" font-family="Geist Mono" font-size="9" font-weight="500">TARGET 90%</text>
 
         <path class="chart-area"
               d="M 30,200 L 80,194 L 130,180 L 180,165 L 230,140 L 280,120 L 330,108 L 380,100 L 430,95 L 490,96
@@ -2303,14 +2986,14 @@ section{position:relative;z-index:2}
 
         <g>
           <rect x="20" y="205" width="48" height="24" rx="3" fill="var(--bg-2)" stroke="var(--red)" stroke-width="1.5"/>
-          <text x="44" y="221" text-anchor="middle" fill="var(--red)" font-family="Bebas Neue" font-size="15" letter-spacing="1">75%</text>
+          <text x="44" y="221" text-anchor="middle" fill="var(--red)" font-family="Geist" font-size="15" letter-spacing="1">75%</text>
         </g>
         <g>
           <rect x="453" y="75" width="48" height="24" rx="3" fill="var(--bg-2)" stroke="var(--green)" stroke-width="1.5"/>
-          <text x="477" y="91" text-anchor="middle" fill="var(--green)" font-family="Bebas Neue" font-size="15" letter-spacing="1">90%</text>
+          <text x="477" y="91" text-anchor="middle" fill="var(--green)" font-family="Geist" font-size="15" letter-spacing="1">90%</text>
         </g>
 
-        <g fill="var(--fg-3)" font-family="JetBrains Mono" font-size="9" letter-spacing="1" font-weight="500">
+        <g fill="var(--fg-3)" font-family="Geist Mono" font-size="9" letter-spacing="1" font-weight="500">
           <text x="30" y="250">MO·0</text>
           <text x="130" y="250">MO·2</text>
           <text x="230" y="250">MO·3</text>
@@ -2319,7 +3002,7 @@ section{position:relative;z-index:2}
         </g>
 
         <line x1="260" y1="60" x2="320" y2="100" stroke="var(--hivis)" stroke-width="1.5"/>
-        <text x="260" y="55" fill="var(--hivis)" font-family="JetBrains Mono" font-size="10" font-weight="600">▲ AUTOMATION DEPLOYED</text>
+        <text x="260" y="55" fill="var(--hivis)" font-family="Geist Mono" font-size="10" font-weight="600">▲ AUTOMATION DEPLOYED</text>
       </svg>
     </div>
   </div>
@@ -2336,7 +3019,7 @@ section{position:relative;z-index:2}
 <section class="projects wrap" id="projects">
   <header class="section-head">
     <div class="section-head-left">
-      <div class="section-num"><span class="n">05</span>DELIVERIES · SIGNATURE SHIPMENTS</div>
+      <div class="section-num"><span class="n">06</span>DELIVERIES · SIGNATURE SHIPMENTS</div>
       <h2 class="fade-up">Things I've <em>built.</em></h2>
     </div>
     <p class="section-head-note">Some planners only use tools. I build them when the tool doesn't exist or doesn't fit.</p>
@@ -2366,41 +3049,41 @@ section{position:relative;z-index:2}
             </linearGradient>
           </defs>
           <rect x="0" y="0" width="520" height="160" rx="4" fill="var(--bg-0)"/>
-          <text x="12" y="18" fill="var(--fg-1)" font-family="JetBrains Mono" font-size="10" letter-spacing="2" font-weight="500">SUPPLIER_DASH · LIVE</text>
+          <text x="12" y="18" fill="var(--fg-1)" font-family="Geist Mono" font-size="10" letter-spacing="2" font-weight="500">SUPPLIER_DASH · LIVE</text>
           <circle cx="505" cy="14" r="3.5" fill="var(--green)"/>
 
           <g>
-            <text x="12" y="40" fill="var(--fg-3)" font-family="JetBrains Mono" font-size="9" font-weight="500">SUP_01 · OTIF</text>
+            <text x="12" y="40" fill="var(--fg-3)" font-family="Geist Mono" font-size="9" font-weight="500">SUP_01 · OTIF</text>
             <rect x="120" y="32" width="380" height="10" fill="var(--bg-3)" rx="1"/>
             <rect x="120" y="32" width="342" height="10" fill="url(#barG)" rx="1"/>
-            <text x="470" y="40" fill="var(--safety)" font-family="JetBrains Mono" font-size="10" font-weight="600">90%</text>
+            <text x="470" y="40" fill="var(--safety)" font-family="Geist Mono" font-size="10" font-weight="600">90%</text>
 
-            <text x="12" y="62" fill="var(--fg-3)" font-family="JetBrains Mono" font-size="9" font-weight="500">SUP_02 · OTIF</text>
+            <text x="12" y="62" fill="var(--fg-3)" font-family="Geist Mono" font-size="9" font-weight="500">SUP_02 · OTIF</text>
             <rect x="120" y="54" width="380" height="10" fill="var(--bg-3)" rx="1"/>
             <rect x="120" y="54" width="299" height="10" fill="var(--hivis)" rx="1"/>
-            <text x="470" y="62" fill="var(--hivis)" font-family="JetBrains Mono" font-size="10" font-weight="600">79%</text>
+            <text x="470" y="62" fill="var(--hivis)" font-family="Geist Mono" font-size="10" font-weight="600">79%</text>
 
-            <text x="12" y="84" fill="var(--fg-3)" font-family="JetBrains Mono" font-size="9" font-weight="500">SUP_03 · OTIF</text>
+            <text x="12" y="84" fill="var(--fg-3)" font-family="Geist Mono" font-size="9" font-weight="500">SUP_03 · OTIF</text>
             <rect x="120" y="76" width="380" height="10" fill="var(--bg-3)" rx="1"/>
             <rect x="120" y="76" width="362" height="10" fill="var(--green)" rx="1"/>
-            <text x="470" y="84" fill="var(--green)" font-family="JetBrains Mono" font-size="10" font-weight="600">95%</text>
+            <text x="470" y="84" fill="var(--green)" font-family="Geist Mono" font-size="10" font-weight="600">95%</text>
 
-            <text x="12" y="106" fill="var(--fg-3)" font-family="JetBrains Mono" font-size="9" font-weight="500">SUP_04 · OTIF</text>
+            <text x="12" y="106" fill="var(--fg-3)" font-family="Geist Mono" font-size="9" font-weight="500">SUP_04 · OTIF</text>
             <rect x="120" y="98" width="380" height="10" fill="var(--bg-3)" rx="1"/>
             <rect x="120" y="98" width="261" height="10" fill="var(--red)" rx="1"/>
-            <text x="470" y="106" fill="var(--red)" font-family="JetBrains Mono" font-size="10" font-weight="600">69%</text>
+            <text x="470" y="106" fill="var(--red)" font-family="Geist Mono" font-size="10" font-weight="600">69%</text>
 
-            <text x="12" y="128" fill="var(--fg-3)" font-family="JetBrains Mono" font-size="9" font-weight="500">SUP_05 · OTIF</text>
+            <text x="12" y="128" fill="var(--fg-3)" font-family="Geist Mono" font-size="9" font-weight="500">SUP_05 · OTIF</text>
             <rect x="120" y="120" width="380" height="10" fill="var(--bg-3)" rx="1"/>
             <rect x="120" y="120" width="331" height="10" fill="var(--green)" rx="1" opacity="0.8"/>
-            <text x="470" y="128" fill="var(--green)" font-family="JetBrains Mono" font-size="10" font-weight="600">87%</text>
+            <text x="470" y="128" fill="var(--green)" font-family="Geist Mono" font-size="10" font-weight="600">87%</text>
           </g>
 
           <line x1="0" y1="140" x2="520" y2="140" stroke="var(--line)"/>
-          <text x="12" y="154" fill="var(--fg-2)" font-family="JetBrains Mono" font-size="9" font-weight="500">500+ PO LINES</text>
-          <text x="170" y="154" fill="var(--fg-2)" font-family="JetBrains Mono" font-size="9" font-weight="500">7 MO ACTIVE</text>
-          <text x="290" y="154" fill="var(--fg-2)" font-family="JetBrains Mono" font-size="9" font-weight="500">5 SUPPLIERS</text>
-          <text x="410" y="154" fill="var(--safety)" font-family="JetBrains Mono" font-size="9" font-weight="600">−60% MANUAL FU</text>
+          <text x="12" y="154" fill="var(--fg-2)" font-family="Geist Mono" font-size="9" font-weight="500">500+ PO LINES</text>
+          <text x="170" y="154" fill="var(--fg-2)" font-family="Geist Mono" font-size="9" font-weight="500">7 MO ACTIVE</text>
+          <text x="290" y="154" fill="var(--fg-2)" font-family="Geist Mono" font-size="9" font-weight="500">5 SUPPLIERS</text>
+          <text x="410" y="154" fill="var(--safety)" font-family="Geist Mono" font-size="9" font-weight="600">−60% MANUAL FU</text>
         </svg>
       </div>
       <div class="project-body" style="padding-top:0">
@@ -2536,7 +3219,7 @@ section{position:relative;z-index:2}
 <section class="stack wrap" id="stack">
   <header class="section-head">
     <div class="section-head-left">
-      <div class="section-num"><span class="n">06</span>KANBAN · STACK</div>
+      <div class="section-num"><span class="n">07</span>KANBAN · STACK</div>
       <h2 class="fade-up">The <em>operating stack.</em></h2>
     </div>
     <p class="section-head-note">Organised the way I think about the work — plan, execute, build, refine.</p>
@@ -2594,7 +3277,7 @@ section{position:relative;z-index:2}
 <section class="creds wrap" id="credentials">
   <header class="section-head">
     <div class="section-head-left">
-      <div class="section-num"><span class="n">07</span>CREDENTIALS · FORMATION</div>
+      <div class="section-num"><span class="n">08</span>CREDENTIALS · FORMATION</div>
       <h2 class="fade-up">Training, <em>formal &amp; field.</em></h2>
     </div>
     <p class="section-head-note">Diploma → B.Sc. → SAP PP cert → MBA in flight. Dual-track: tech fluency + business strategy.</p>
