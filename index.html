@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sai Dheeraj — Supply Chain & Planning Architect</title>
-<meta name="description" content="End-to-end supply chain planner. Kinaxis expert. SAP PP certified. $80M+ portfolio at Becton Dickinson.">
+<meta name="description" content="End-to-end supply chain planner. Kinaxis expert. SAP PP certified. $30M+ portfolio at Becton Dickinson.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -1851,7 +1851,7 @@ section{position:relative;z-index:2}
       </h1>
       <div class="hero-role fade-up d2">End-to-End Supply Chain Planner</div>
       <p class="hero-tag fade-up d3">
-        Running <strong>end-to-end planning</strong> for a <em>$80M+ pharma / medical portfolio</em> at <strong>Becton Dickinson</strong>. Previously scaled OTIF from 75% → 90% at Schneider Electric in 6 months. I plan the supply chain — and build the Python tools that run on top of it.
+        Running <strong>end-to-end planning</strong> for a <em>$30M+ pharma / medical portfolio</em> at <strong>Becton Dickinson</strong>. Previously scaled OTIF from 75% → 90% at Schneider Electric in 6 months. I plan the supply chain — and build the Python tools that run on top of it.
       </p>
       <div class="hero-cta fade-up d4">
         <a href="#experience" class="btn btn-primary">
@@ -1874,10 +1874,10 @@ section{position:relative;z-index:2}
         <div class="waybill-row"><span class="k">Shipper</span><span class="v">Becton Dickinson · IN</span></div>
         <div class="waybill-row"><span class="k">Role</span><span class="v">E2E Planner</span></div>
         <div class="waybill-row"><span class="k">Industry</span><span class="v">Pharma / MedDev</span></div>
-        <div class="waybill-row"><span class="k">Procurment spend</span><span class="v"><em>$30M+</em> / yr</span></div>
+        <div class="waybill-row"><span class="k">Portfolio</span><span class="v"><em>$30M+</em> / yr</span></div>
         <div class="waybill-row"><span class="k">Suppliers</span><span class="v">15+ global</span></div>
         <div class="waybill-row"><span class="k">OTIF Live</span><span class="v green">95.2%</span></div>
-        <div class="waybill-row"><span class="k">Status</span><span class="v green">Figuring out - SCM</span></div>
+        <div class="waybill-row"><span class="k">Status</span><span class="v green">HIRING-READY</span></div>
       </div>
       <div class="waybill-foot">
         <div class="barcode">
@@ -2277,250 +2277,255 @@ section{position:relative;z-index:2}
       <div class="section-num"><span class="n">03</span>NETWORK · MULTI-TIER FLOW</div>
       <h2 class="fade-up">The network <em>I run.</em></h2>
     </div>
-    <p class="section-head-note">Multi-tier supplier network feeding production and distribution · managed daily in Kinaxis Rapid Response.</p>
+    <p class="section-head-note">OEM receipts from suppliers and finished goods from plant — both consolidated through the DC I plan, then routed via distributors to customers.</p>
   </header>
 
   <div class="network-card fade-up">
     <div class="network-head">
       <div class="network-head-title">Supply Network Topology</div>
       <div class="network-head-meta">
-        <span>NODES <b>34</b></span>
-        <span>FLOWS <b>52</b></span>
-        <span>TIER <b>T2 → CUST</b></span>
+        <span>NODES <b>11</b></span>
+        <span>FLOWS <b>12</b></span>
+        <span>SCOPE <b>SUP + PLANT → DC → DIST → CUST</b></span>
         <span class="live"><span class="pulse-dot"></span>LIVE</span>
       </div>
     </div>
 
     <div class="network-viz">
-      <svg viewBox="0 0 1100 420" preserveAspectRatio="xMidYMid meet" width="100%" style="position:relative;z-index:1">
+      <svg viewBox="0 0 1100 460" preserveAspectRatio="xMidYMid meet" width="100%" style="position:relative;z-index:1">
         <defs>
-          <!-- gradients -->
           <radialGradient id="nGlow" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stop-color="#FF7A1A" stop-opacity="0.4"/>
             <stop offset="100%" stop-color="#FF7A1A" stop-opacity="0"/>
           </radialGradient>
+          <radialGradient id="plantGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#F6EFDD" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#F6EFDD" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="dcGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#3FB0A6" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#3FB0A6" stop-opacity="0"/>
+          </radialGradient>
           <linearGradient id="flowOrange" x1="0%" x2="100%" y1="0%" y2="0%">
             <stop offset="0%" stop-color="#FF7A1A" stop-opacity="0.2"/>
-            <stop offset="100%" stop-color="#FF7A1A" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#FF7A1A" stop-opacity="0.9"/>
+          </linearGradient>
+          <linearGradient id="flowCream" x1="0%" x2="100%" y1="0%" y2="0%">
+            <stop offset="0%" stop-color="#F6EFDD" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#F6EFDD" stop-opacity="0.9"/>
+          </linearGradient>
+          <linearGradient id="flowTeal" x1="0%" x2="100%" y1="0%" y2="0%">
+            <stop offset="0%" stop-color="#3FB0A6" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#3FB0A6" stop-opacity="0.9"/>
           </linearGradient>
           <linearGradient id="flowGreen" x1="0%" x2="100%" y1="0%" y2="0%">
-            <stop offset="0%" stop-color="#6EE7A8" stop-opacity="0.2"/>
-            <stop offset="100%" stop-color="#6EE7A8" stop-opacity="0.8"/>
+            <stop offset="0%" stop-color="#6EE7A8" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#6EE7A8" stop-opacity="0.9"/>
           </linearGradient>
-
-          <!-- packet markers -->
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="3"/>
-          </filter>
         </defs>
 
         <!-- Column headers -->
-        <g font-family="Geist Mono" font-size="10" fill="#8F8874" font-weight="600" letter-spacing="1">
-          <text x="100" y="30" text-anchor="middle" fill="#5C5742">TIER 2</text>
-          <text x="100" y="44" text-anchor="middle" fill="#F5D547">RAW MATERIAL</text>
+        <g font-family="Geist Mono" font-size="10" font-weight="600" letter-spacing="1">
+          <text x="140" y="30" text-anchor="middle" fill="#5C5742">INPUTS</text>
+          <text x="140" y="44" text-anchor="middle" fill="#FF7A1A">SUPPLIERS &amp; PLANT</text>
 
-          <text x="330" y="30" text-anchor="middle" fill="#5C5742">TIER 1</text>
-          <text x="330" y="44" text-anchor="middle" fill="#FF7A1A">COMPONENT SUPP.</text>
+          <text x="460" y="30" text-anchor="middle" fill="#5C5742">MY DC</text>
+          <text x="460" y="44" text-anchor="middle" fill="#3FB0A6">DISTRIBUTION HUB</text>
 
-          <text x="560" y="30" text-anchor="middle" fill="#5C5742">PLANTS</text>
-          <text x="560" y="44" text-anchor="middle" fill="#F6EFDD">MANUFACTURING</text>
+          <text x="770" y="30" text-anchor="middle" fill="#5C5742">CHANNEL</text>
+          <text x="770" y="44" text-anchor="middle" fill="#F5D547">DISTRIBUTORS</text>
 
-          <text x="790" y="30" text-anchor="middle" fill="#5C5742">DC / WAREHOUSE</text>
-          <text x="790" y="44" text-anchor="middle" fill="#3FB0A6">DISTRIBUTION</text>
-
-          <text x="1020" y="30" text-anchor="middle" fill="#5C5742">DEMAND</text>
-          <text x="1020" y="44" text-anchor="middle" fill="#6EE7A8">CUSTOMERS</text>
+          <text x="1010" y="30" text-anchor="middle" fill="#5C5742">DEMAND</text>
+          <text x="1010" y="44" text-anchor="middle" fill="#6EE7A8">CUSTOMERS</text>
         </g>
 
-        <!-- Column dividers (faint) -->
+        <!-- Column dividers -->
         <g stroke="rgba(255,255,255,0.04)" stroke-dasharray="2 6">
-          <line x1="215" y1="60" x2="215" y2="400"/>
-          <line x1="445" y1="60" x2="445" y2="400"/>
-          <line x1="675" y1="60" x2="675" y2="400"/>
-          <line x1="905" y1="60" x2="905" y2="400"/>
+          <line x1="290" y1="60" x2="290" y2="440"/>
+          <line x1="620" y1="60" x2="620" y2="440"/>
+          <line x1="900" y1="60" x2="900" y2="440"/>
+        </g>
+
+        <!-- "I manage" highlight banner above DC -->
+        <g>
+          <rect x="390" y="68" width="140" height="20" rx="10" fill="rgba(63,176,166,0.12)" stroke="rgba(63,176,166,0.4)" stroke-width="1"/>
+          <text x="460" y="82" text-anchor="middle" fill="#3FB0A6" font-family="Geist" font-size="10" font-weight="700" letter-spacing="1">● I PLAN THIS</text>
         </g>
 
         <!-- ============ FLOW PATHS ============ -->
-        <!-- T2 → T1 flows -->
-        <g fill="none" stroke-width="1.5">
-          <path class="flow-line" stroke="#F5D547" opacity="0.5" d="M 100,110 C 200,110 230,140 330,140"/>
-          <path class="flow-line" stroke="#F5D547" opacity="0.4" d="M 100,110 C 200,110 230,240 330,240"/>
-          <path class="flow-line" stroke="#F5D547" opacity="0.5" d="M 100,210 C 200,210 230,140 330,140"/>
-          <path class="flow-line" stroke="#F5D547" opacity="0.4" d="M 100,210 C 200,210 230,240 330,240"/>
-          <path class="flow-line" stroke="#F5D547" opacity="0.4" d="M 100,310 C 200,310 230,340 330,340"/>
-          <path class="flow-line" stroke="#F5D547" opacity="0.4" d="M 100,310 C 200,310 230,240 330,240"/>
-        </g>
-
-        <!-- T1 → Plants flows -->
-        <g fill="none" stroke-width="1.8">
-          <path id="flow-t1p-1" class="flow-line" stroke="url(#flowOrange)" d="M 330,140 C 430,140 460,180 560,180"/>
-          <path id="flow-t1p-2" class="flow-line" stroke="url(#flowOrange)" d="M 330,140 C 430,140 460,270 560,270"/>
-          <path id="flow-t1p-3" class="flow-line" stroke="url(#flowOrange)" d="M 330,240 C 430,240 460,180 560,180"/>
-          <path id="flow-t1p-4" class="flow-line" stroke="url(#flowOrange)" d="M 330,240 C 430,240 460,270 560,270"/>
-          <path id="flow-t1p-5" class="flow-line" stroke="url(#flowOrange)" d="M 330,340 C 430,340 460,270 560,270"/>
-        </g>
-
-        <!-- Plants → DCs flows -->
+        <!-- Suppliers → DC (OEM flow, orange) -->
         <g fill="none" stroke-width="2">
-          <path id="flow-pd-1" class="flow-line" stroke="#3FB0A6" opacity="0.8" d="M 560,180 C 660,180 690,160 790,160"/>
-          <path id="flow-pd-2" class="flow-line" stroke="#3FB0A6" opacity="0.8" d="M 560,180 C 660,180 690,240 790,240"/>
-          <path id="flow-pd-3" class="flow-line" stroke="#3FB0A6" opacity="0.8" d="M 560,270 C 660,270 690,240 790,240"/>
-          <path id="flow-pd-4" class="flow-line" stroke="#3FB0A6" opacity="0.8" d="M 560,270 C 660,270 690,320 790,320"/>
+          <path id="flow-s-dc-1" class="flow-line" stroke="url(#flowOrange)" d="M 180,140 C 300,140 340,220 440,220"/>
+          <path id="flow-s-dc-2" class="flow-line" stroke="url(#flowOrange)" d="M 180,220 C 300,220 340,220 440,220"/>
+          <path id="flow-s-dc-3" class="flow-line" stroke="url(#flowOrange)" d="M 180,300 C 300,300 340,220 440,220"/>
+        </g>
+        <!-- Plant → DC (FG flow, cream) -->
+        <g fill="none" stroke-width="2">
+          <path id="flow-p-dc" class="flow-line" stroke="url(#flowCream)" d="M 180,400 C 300,400 340,240 440,240"/>
         </g>
 
-        <!-- DCs → Customers flows -->
+        <!-- DC → Distributors (teal) -->
+        <g fill="none" stroke-width="2.2">
+          <path id="flow-dc-d-1" class="flow-line" stroke="url(#flowTeal)" d="M 500,220 C 620,220 650,160 770,160"/>
+          <path id="flow-dc-d-2" class="flow-line" stroke="url(#flowTeal)" d="M 500,220 C 620,220 650,250 770,250"/>
+          <path id="flow-dc-d-3" class="flow-line" stroke="url(#flowTeal)" d="M 500,220 C 620,220 650,340 770,340"/>
+        </g>
+
+        <!-- Distributors → Customers (green) -->
         <g fill="none" stroke-width="2">
-          <path id="flow-dc-1" class="flow-line" stroke="url(#flowGreen)" d="M 790,160 C 890,160 920,140 1020,140"/>
-          <path id="flow-dc-2" class="flow-line" stroke="url(#flowGreen)" d="M 790,160 C 890,160 920,220 1020,220"/>
-          <path id="flow-dc-3" class="flow-line" stroke="url(#flowGreen)" d="M 790,240 C 890,240 920,220 1020,220"/>
-          <path id="flow-dc-4" class="flow-line" stroke="url(#flowGreen)" d="M 790,240 C 890,240 920,300 1020,300"/>
-          <path id="flow-dc-5" class="flow-line" stroke="url(#flowGreen)" d="M 790,320 C 890,320 920,300 1020,300"/>
+          <path id="flow-d-c-1" class="flow-line" stroke="url(#flowGreen)" d="M 820,160 C 900,160 930,140 1000,140"/>
+          <path id="flow-d-c-2" class="flow-line" stroke="url(#flowGreen)" d="M 820,160 C 900,160 930,250 1000,250"/>
+          <path id="flow-d-c-3" class="flow-line" stroke="url(#flowGreen)" d="M 820,250 C 900,250 930,250 1000,250"/>
+          <path id="flow-d-c-4" class="flow-line" stroke="url(#flowGreen)" d="M 820,250 C 900,250 930,360 1000,360"/>
+          <path id="flow-d-c-5" class="flow-line" stroke="url(#flowGreen)" d="M 820,340 C 900,340 930,360 1000,360"/>
         </g>
 
         <!-- ============ MOVING PACKETS ============ -->
         <g>
           <circle r="4" class="packet">
             <animateMotion dur="4s" repeatCount="indefinite" rotate="auto">
-              <mpath href="#flow-t1p-2"/>
+              <mpath href="#flow-s-dc-1"/>
             </animateMotion>
           </circle>
           <circle r="4" class="packet">
-            <animateMotion dur="5s" repeatCount="indefinite" begin="1s">
-              <mpath href="#flow-pd-1"/>
+            <animateMotion dur="3.5s" repeatCount="indefinite" begin="1.2s">
+              <mpath href="#flow-s-dc-3"/>
             </animateMotion>
           </circle>
-          <circle r="4" class="packet" style="fill:var(--green);filter:drop-shadow(0 0 6px var(--green))">
+          <circle r="4" style="fill:#F6EFDD;filter:drop-shadow(0 0 6px #F6EFDD)">
+            <animateMotion dur="5s" repeatCount="indefinite" begin="0.5s">
+              <mpath href="#flow-p-dc"/>
+            </animateMotion>
+          </circle>
+          <circle r="4" style="fill:#3FB0A6;filter:drop-shadow(0 0 6px #3FB0A6)">
+            <animateMotion dur="3s" repeatCount="indefinite" begin="1.5s">
+              <mpath href="#flow-dc-d-1"/>
+            </animateMotion>
+          </circle>
+          <circle r="4" style="fill:#3FB0A6;filter:drop-shadow(0 0 6px #3FB0A6)">
+            <animateMotion dur="3.5s" repeatCount="indefinite" begin="2.5s">
+              <mpath href="#flow-dc-d-2"/>
+            </animateMotion>
+          </circle>
+          <circle r="4" style="fill:#6EE7A8;filter:drop-shadow(0 0 6px #6EE7A8)">
             <animateMotion dur="3s" repeatCount="indefinite" begin="2s">
-              <mpath href="#flow-dc-2"/>
+              <mpath href="#flow-d-c-2"/>
             </animateMotion>
           </circle>
-          <circle r="4" class="packet" style="fill:var(--green);filter:drop-shadow(0 0 6px var(--green))">
-            <animateMotion dur="3.5s" repeatCount="indefinite" begin="0.5s">
-              <mpath href="#flow-dc-4"/>
+          <circle r="4" style="fill:#6EE7A8;filter:drop-shadow(0 0 6px #6EE7A8)">
+            <animateMotion dur="3.5s" repeatCount="indefinite" begin="0.8s">
+              <mpath href="#flow-d-c-4"/>
             </animateMotion>
           </circle>
         </g>
 
         <!-- ============ NODES ============ -->
-        <!-- T2 nodes -->
+
+        <!-- SUPPLIERS (3 generic nodes, orange) -->
         <g>
-          <g transform="translate(100,110)">
-            <circle r="22" fill="url(#nGlow)" opacity="0.7"/>
-            <rect x="-14" y="-14" width="28" height="28" rx="4" fill="#111F34" stroke="#F5D547" stroke-width="1.5" class="node-pulse"/>
-            <text y="4" text-anchor="middle" fill="#F5D547" font-family="Geist" font-size="11" font-weight="800">T2</text>
-            <text y="50" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">STEEL · US</text>
+          <g transform="translate(150,140)">
+            <circle r="26" fill="url(#nGlow)" opacity="0.8"/>
+            <rect x="-18" y="-16" width="36" height="32" rx="5" fill="#1A2B44" stroke="#FF7A1A" stroke-width="2" class="node-pulse"/>
+            <text y="3" text-anchor="middle" fill="#FF7A1A" font-family="Geist" font-size="11" font-weight="800">SUP</text>
+            <text y="-24" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">SUPPLIER 1</text>
+            <text y="38" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">OEM</text>
           </g>
-          <g transform="translate(100,210)">
-            <circle r="22" fill="url(#nGlow)" opacity="0.7"/>
-            <rect x="-14" y="-14" width="28" height="28" rx="4" fill="#111F34" stroke="#F5D547" stroke-width="1.5" class="node-pulse d1"/>
-            <text y="4" text-anchor="middle" fill="#F5D547" font-family="Geist" font-size="11" font-weight="800">T2</text>
-            <text y="50" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">RESIN · SEA</text>
+          <g transform="translate(150,220)">
+            <circle r="26" fill="url(#nGlow)" opacity="0.8"/>
+            <rect x="-18" y="-16" width="36" height="32" rx="5" fill="#1A2B44" stroke="#FF7A1A" stroke-width="2" class="node-pulse d1"/>
+            <text y="3" text-anchor="middle" fill="#FF7A1A" font-family="Geist" font-size="11" font-weight="800">SUP</text>
+            <text y="-24" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">SUPPLIER 2</text>
+            <text y="38" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">OEM</text>
           </g>
-          <g transform="translate(100,310)">
-            <circle r="22" fill="url(#nGlow)" opacity="0.7"/>
-            <rect x="-14" y="-14" width="28" height="28" rx="4" fill="#111F34" stroke="#F5D547" stroke-width="1.5" class="node-pulse d2"/>
-            <text y="4" text-anchor="middle" fill="#F5D547" font-family="Geist" font-size="11" font-weight="800">T2</text>
-            <text y="50" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">GLASS · IN</text>
+          <g transform="translate(150,300)">
+            <circle r="26" fill="url(#nGlow)" opacity="0.8"/>
+            <rect x="-18" y="-16" width="36" height="32" rx="5" fill="#1A2B44" stroke="#FF7A1A" stroke-width="2" class="node-pulse d2"/>
+            <text y="3" text-anchor="middle" fill="#FF7A1A" font-family="Geist" font-size="11" font-weight="800">SUP</text>
+            <text y="-24" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">SUPPLIER 3</text>
+            <text y="38" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">OEM</text>
           </g>
         </g>
 
-        <!-- T1 nodes (larger - component suppliers) -->
+        <!-- PLANT (1 generic node, cream) -->
+        <g transform="translate(150,400)">
+          <circle r="30" fill="url(#plantGlow)"/>
+          <rect x="-22" y="-18" width="44" height="36" rx="5" fill="#1A2B44" stroke="#F6EFDD" stroke-width="2" class="node-pulse d3"/>
+          <!-- factory silhouette inside -->
+          <rect x="-15" y="-6" width="8" height="16" fill="#F6EFDD" opacity="0.25"/>
+          <rect x="-5" y="-12" width="8" height="22" fill="#F6EFDD" opacity="0.3"/>
+          <rect x="5" y="-6" width="10" height="16" fill="#F6EFDD" opacity="0.25"/>
+          <text y="-32" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="9" font-weight="700">PLANT</text>
+          <text y="42" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">FINISHED GOODS</text>
+        </g>
+
+        <!-- DC (central hub I manage - larger teal warehouse) -->
+        <g transform="translate(460,230)">
+          <circle r="60" fill="url(#dcGlow)"/>
+          <circle r="42" fill="none" stroke="rgba(63,176,166,0.2)" stroke-width="1" stroke-dasharray="2 4"/>
+          <path d="M -36,-18 L 0,-34 L 36,-18 L 36,28 L -36,28 Z" fill="#1A2B44" stroke="#3FB0A6" stroke-width="2.5" class="node-pulse"/>
+          <!-- roof line -->
+          <line x1="-36" y1="-18" x2="36" y2="-18" stroke="#3FB0A6" stroke-width="1" opacity="0.5"/>
+          <!-- bay doors -->
+          <rect x="-26" y="4" width="14" height="22" fill="#3FB0A6" opacity="0.35" rx="1"/>
+          <rect x="-6" y="4" width="14" height="22" fill="#3FB0A6" opacity="0.35" rx="1"/>
+          <rect x="14" y="4" width="12" height="22" fill="#3FB0A6" opacity="0.35" rx="1"/>
+          <!-- DC label inside -->
+          <text y="-2" text-anchor="middle" fill="#F6EFDD" font-family="Geist" font-size="14" font-weight="800" letter-spacing="1">DC 1</text>
+          <!-- external label below -->
+          <text y="68" text-anchor="middle" fill="#3FB0A6" font-family="Geist" font-size="11" font-weight="800" letter-spacing="1.5">DISTRIBUTION CENTER</text>
+          <text y="82" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="9" font-weight="600">OEM + FG consolidation</text>
+        </g>
+
+        <!-- DISTRIBUTORS (3 nodes, yellow/hi-vis as they're channel partners) -->
         <g>
-          <g transform="translate(330,140)">
-            <circle r="28" fill="url(#nGlow)"/>
-            <rect x="-22" y="-18" width="44" height="36" rx="5" fill="#1A2B44" stroke="#FF7A1A" stroke-width="2" class="node-pulse"/>
-            <text y="-2" text-anchor="middle" fill="#FF7A1A" font-family="Geist" font-size="13" font-weight="800">T1</text>
-            <text y="11" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="8" font-weight="600">SUP·A</text>
-            <text y="56" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">PRECISION · DE</text>
-            <text y="68" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">LT 14d</text>
+          <g transform="translate(770,160)">
+            <circle r="28" fill="rgba(245,213,71,0.1)"/>
+            <path d="M -22,-12 L 0,-22 L 22,-12 L 22,18 L -22,18 Z" fill="#1A2B44" stroke="#F5D547" stroke-width="2" class="node-pulse"/>
+            <rect x="-10" y="0" width="8" height="14" fill="#F5D547" opacity="0.35" rx="1"/>
+            <rect x="2" y="0" width="8" height="14" fill="#F5D547" opacity="0.35" rx="1"/>
+            <text y="-32" text-anchor="middle" fill="#F5D547" font-family="Geist Mono" font-size="9" font-weight="700">DISTRIBUTOR 1</text>
+            <text y="38" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">CHANNEL</text>
           </g>
-          <g transform="translate(330,240)">
-            <circle r="28" fill="url(#nGlow)"/>
-            <rect x="-22" y="-18" width="44" height="36" rx="5" fill="#1A2B44" stroke="#FF7A1A" stroke-width="2" class="node-pulse d1"/>
-            <text y="-2" text-anchor="middle" fill="#FF7A1A" font-family="Geist" font-size="13" font-weight="800">T1</text>
-            <text y="11" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="8" font-weight="600">SUP·B</text>
-            <text y="56" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">ELECTRO · CN</text>
-            <text y="68" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">LT 21d</text>
+          <g transform="translate(770,250)">
+            <circle r="28" fill="rgba(245,213,71,0.1)"/>
+            <path d="M -22,-12 L 0,-22 L 22,-12 L 22,18 L -22,18 Z" fill="#1A2B44" stroke="#F5D547" stroke-width="2" class="node-pulse d1"/>
+            <rect x="-10" y="0" width="8" height="14" fill="#F5D547" opacity="0.35" rx="1"/>
+            <rect x="2" y="0" width="8" height="14" fill="#F5D547" opacity="0.35" rx="1"/>
+            <text y="-32" text-anchor="middle" fill="#F5D547" font-family="Geist Mono" font-size="9" font-weight="700">DISTRIBUTOR 2</text>
+            <text y="38" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">CHANNEL</text>
           </g>
-          <g transform="translate(330,340)">
-            <circle r="28" fill="url(#nGlow)"/>
-            <rect x="-22" y="-18" width="44" height="36" rx="5" fill="#1A2B44" stroke="#FF7A1A" stroke-width="2" class="node-pulse d2"/>
-            <text y="-2" text-anchor="middle" fill="#FF7A1A" font-family="Geist" font-size="13" font-weight="800">T1</text>
-            <text y="11" text-anchor="middle" fill="#F6EFDD" font-family="Geist Mono" font-size="8" font-weight="600">SUP·C</text>
-            <text y="56" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">PACK · IN</text>
-            <text y="68" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">LT 7d</text>
+          <g transform="translate(770,340)">
+            <circle r="28" fill="rgba(245,213,71,0.1)"/>
+            <path d="M -22,-12 L 0,-22 L 22,-12 L 22,18 L -22,18 Z" fill="#1A2B44" stroke="#F5D547" stroke-width="2" class="node-pulse d2"/>
+            <rect x="-10" y="0" width="8" height="14" fill="#F5D547" opacity="0.35" rx="1"/>
+            <rect x="2" y="0" width="8" height="14" fill="#F5D547" opacity="0.35" rx="1"/>
+            <text y="-32" text-anchor="middle" fill="#F5D547" font-family="Geist Mono" font-size="9" font-weight="700">DISTRIBUTOR 3</text>
+            <text y="38" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">CHANNEL</text>
           </g>
         </g>
 
-        <!-- Plants (factories - square with chimney symbol) -->
+        <!-- CUSTOMERS (3 generic nodes, green) -->
         <g>
-          <g transform="translate(560,180)">
-            <circle r="34" fill="rgba(110,231,168,0.06)"/>
-            <rect x="-26" y="-22" width="52" height="44" rx="6" fill="#1A2B44" stroke="#F6EFDD" stroke-width="2" class="node-pulse"/>
-            <!-- factory icon -->
-            <rect x="-18" y="-8" width="10" height="18" fill="#F6EFDD" opacity="0.2"/>
-            <rect x="-6" y="-14" width="10" height="24" fill="#F6EFDD" opacity="0.25"/>
-            <rect x="6" y="-8" width="12" height="18" fill="#F6EFDD" opacity="0.2"/>
-            <text y="-30" text-anchor="middle" fill="#F6EFDD" font-family="Geist" font-size="10" font-weight="800">PLANT·1</text>
-            <text y="60" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">GURUGRAM · IN</text>
-            <text y="72" text-anchor="middle" fill="#6EE7A8" font-family="Geist Mono" font-size="8" font-weight="600">OEE 82%</text>
+          <g transform="translate(1010,140)">
+            <circle r="24" fill="rgba(110,231,168,0.12)"/>
+            <circle r="18" fill="#1A2B44" stroke="#6EE7A8" stroke-width="2" class="node-pulse"/>
+            <circle r="7" fill="#6EE7A8"/>
+            <text y="-32" text-anchor="middle" fill="#6EE7A8" font-family="Geist Mono" font-size="9" font-weight="700">CUSTOMER 1</text>
+            <text y="44" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">DEMAND</text>
           </g>
-          <g transform="translate(560,270)">
-            <circle r="34" fill="rgba(110,231,168,0.06)"/>
-            <rect x="-26" y="-22" width="52" height="44" rx="6" fill="#1A2B44" stroke="#F6EFDD" stroke-width="2" class="node-pulse d1"/>
-            <rect x="-18" y="-8" width="10" height="18" fill="#F6EFDD" opacity="0.2"/>
-            <rect x="-6" y="-14" width="10" height="24" fill="#F6EFDD" opacity="0.25"/>
-            <rect x="6" y="-8" width="12" height="18" fill="#F6EFDD" opacity="0.2"/>
-            <text y="-30" text-anchor="middle" fill="#F6EFDD" font-family="Geist" font-size="10" font-weight="800">PLANT·2</text>
-            <text y="60" text-anchor="middle" fill="#B8BDC7" font-family="Geist Mono" font-size="9" font-weight="600">HYD · IN</text>
-            <text y="72" text-anchor="middle" fill="#6EE7A8" font-family="Geist Mono" font-size="8" font-weight="600">OEE 78%</text>
+          <g transform="translate(1010,250)">
+            <circle r="24" fill="rgba(110,231,168,0.12)"/>
+            <circle r="18" fill="#1A2B44" stroke="#6EE7A8" stroke-width="2" class="node-pulse d1"/>
+            <circle r="7" fill="#6EE7A8"/>
+            <text y="-32" text-anchor="middle" fill="#6EE7A8" font-family="Geist Mono" font-size="9" font-weight="700">CUSTOMER 2</text>
+            <text y="44" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">DEMAND</text>
           </g>
-        </g>
-
-        <!-- DCs (warehouses) -->
-        <g>
-          <g transform="translate(790,160)">
-            <circle r="28" fill="rgba(63,176,166,0.08)"/>
-            <path d="M -22,-12 L 0,-22 L 22,-12 L 22,18 L -22,18 Z" fill="#1A2B44" stroke="#3FB0A6" stroke-width="2" class="node-pulse"/>
-            <rect x="-10" y="0" width="8" height="14" fill="#3FB0A6" opacity="0.3"/>
-            <rect x="2" y="0" width="8" height="14" fill="#3FB0A6" opacity="0.3"/>
-            <text y="50" text-anchor="middle" fill="#3FB0A6" font-family="Geist" font-size="10" font-weight="800">DC · NORTH</text>
-          </g>
-          <g transform="translate(790,240)">
-            <circle r="28" fill="rgba(63,176,166,0.08)"/>
-            <path d="M -22,-12 L 0,-22 L 22,-12 L 22,18 L -22,18 Z" fill="#1A2B44" stroke="#3FB0A6" stroke-width="2" class="node-pulse d1"/>
-            <rect x="-10" y="0" width="8" height="14" fill="#3FB0A6" opacity="0.3"/>
-            <rect x="2" y="0" width="8" height="14" fill="#3FB0A6" opacity="0.3"/>
-            <text y="50" text-anchor="middle" fill="#3FB0A6" font-family="Geist" font-size="10" font-weight="800">DC · CENTRAL</text>
-          </g>
-          <g transform="translate(790,320)">
-            <circle r="28" fill="rgba(63,176,166,0.08)"/>
-            <path d="M -22,-12 L 0,-22 L 22,-12 L 22,18 L -22,18 Z" fill="#1A2B44" stroke="#3FB0A6" stroke-width="2" class="node-pulse d2"/>
-            <rect x="-10" y="0" width="8" height="14" fill="#3FB0A6" opacity="0.3"/>
-            <rect x="2" y="0" width="8" height="14" fill="#3FB0A6" opacity="0.3"/>
-            <text y="50" text-anchor="middle" fill="#3FB0A6" font-family="Geist" font-size="10" font-weight="800">DC · SOUTH</text>
-          </g>
-        </g>
-
-        <!-- Customers (circular demand nodes) -->
-        <g>
-          <g transform="translate(1020,140)">
-            <circle r="24" fill="rgba(110,231,168,0.1)"/>
-            <circle r="16" fill="#1A2B44" stroke="#6EE7A8" stroke-width="2" class="node-pulse"/>
-            <circle r="6" fill="#6EE7A8"/>
-            <text y="42" text-anchor="middle" fill="#6EE7A8" font-family="Geist" font-size="10" font-weight="800">HOSP · A</text>
-          </g>
-          <g transform="translate(1020,220)">
-            <circle r="24" fill="rgba(110,231,168,0.1)"/>
-            <circle r="16" fill="#1A2B44" stroke="#6EE7A8" stroke-width="2" class="node-pulse d1"/>
-            <circle r="6" fill="#6EE7A8"/>
-            <text y="42" text-anchor="middle" fill="#6EE7A8" font-family="Geist" font-size="10" font-weight="800">DISTR · B</text>
-          </g>
-          <g transform="translate(1020,300)">
-            <circle r="24" fill="rgba(110,231,168,0.1)"/>
-            <circle r="16" fill="#1A2B44" stroke="#6EE7A8" stroke-width="2" class="node-pulse d2"/>
-            <circle r="6" fill="#6EE7A8"/>
-            <text y="42" text-anchor="middle" fill="#6EE7A8" font-family="Geist" font-size="10" font-weight="800">RETAIL · C</text>
+          <g transform="translate(1010,360)">
+            <circle r="24" fill="rgba(110,231,168,0.12)"/>
+            <circle r="18" fill="#1A2B44" stroke="#6EE7A8" stroke-width="2" class="node-pulse d2"/>
+            <circle r="7" fill="#6EE7A8"/>
+            <text y="-32" text-anchor="middle" fill="#6EE7A8" font-family="Geist Mono" font-size="9" font-weight="700">CUSTOMER 3</text>
+            <text y="44" text-anchor="middle" fill="#5C5742" font-family="Geist Mono" font-size="8">DEMAND</text>
           </g>
         </g>
       </svg>
@@ -2528,16 +2533,16 @@ section{position:relative;z-index:2}
 
     <div class="network-legend">
       <div class="network-legend-items">
-        <div class="network-legend-item"><span class="sw" style="background:#F5D547"></span>T2 · Raw Materials</div>
-        <div class="network-legend-item"><span class="sw" style="background:#FF7A1A"></span>T1 · Components</div>
-        <div class="network-legend-item"><span class="sw" style="background:#F6EFDD"></span>Plants · OEE tracked</div>
-        <div class="network-legend-item"><span class="sw" style="background:#3FB0A6"></span>Distribution Centers</div>
+        <div class="network-legend-item"><span class="sw" style="background:#FF7A1A"></span>OEM Suppliers</div>
+        <div class="network-legend-item"><span class="sw" style="background:#F6EFDD"></span>Plant · FG source</div>
+        <div class="network-legend-item"><span class="sw" style="background:#3FB0A6"></span>DC · I plan this</div>
+        <div class="network-legend-item"><span class="sw" style="background:#F5D547"></span>Distributors</div>
         <div class="network-legend-item"><span class="sw" style="background:#6EE7A8"></span>Customers</div>
       </div>
       <div class="network-legend-stats">
         <span>OTIF <b>95%+</b></span>
         <span>LEAD <b>-12d</b></span>
-        <span>NODES <b>15+ suppliers</b></span>
+        <span>OEM suppliers <b>15+</b></span>
       </div>
     </div>
   </div>
